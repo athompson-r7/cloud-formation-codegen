@@ -9,54 +9,63 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html",
     "variables": [
         {
+            "description": "The name of the S3 bucket that contains the source code of your Lambda function. The             S3 bucket must be in the same region in which the stack is created.",
             "name": "S3Bucket",
             "name_underscore": "s3_bucket",
-            "required": "Conditional You must specify an S3 bucket location (using the\n              S3Bucket and S3Key properties) or the ZipFile\n            property.",
+            "required": "Conditional You must specify an S3 bucket location (using the               S3Bucket and S3Key properties) or the ZipFile             property.",
             "type": "String"
         },
         {
+            "description": "The location and name of your source code .zip file. If you             specify this property, you must also specify the S3Bucket property.",
             "name": "S3Key",
             "name_underscore": "s3_key",
-            "required": "Conditional You must specify an S3 bucket location (using the\n              S3Bucket and S3Key properties) or the ZipFile\n            property.",
+            "required": "Conditional You must specify an S3 bucket location (using the               S3Bucket and S3Key properties) or the ZipFile             property.",
             "type": "String"
         },
         {
+            "description": "If you have S3 versioning enabled, the version ID of your source code               .zip file. You can specify this property only if you specify a             bucket location.",
             "name": "S3ObjectVersion",
             "name_underscore": "s3_object_version",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "For nodejs runtime environments, the source code of your Lambda             function. You cannot use this property with other runtime environments.",
             "name": "ZipFile",
             "name_underscore": "zip_file",
-            "required": "Conditional. You must specify a bucket location (the\n              S3Bucket and S3Key properties) or the ZipFile\n            property.",
+            "required": "Conditional. You must specify a bucket location (the               S3Bucket and S3Key properties) or the ZipFile             property.",
             "type": "String"
         },
         {
+            "description": "The fields in a custom resource                 request.",
             "name": "event",
             "name_underscore": "event",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An object that is specific to Lambda functions. It enables you to specify when the               function and any callbacks have completed execution or to access information from               within the Lambda execution environment. For more information, see Programming Model (Node.js) in the                 AWS Lambda Developer Guide.",
             "name": "context",
             "name_underscore": "context",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Whether the function successfully completed. Use the cfn-response               module constants to specify the status: SUCCESS for successful executions               and FAILED for failed executions.",
             "name": "responseStatus",
             "name_underscore": "response_status",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The Data field of a custom resource response object. The data is a list of               name-value pairs.",
             "name": "responseData",
             "name_underscore": "response_data",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An optional unique identifier of the custom resource that invoked the function. By               default, the module uses the name of the CloudWatch Logs log stream name that is associated with               the Lambda function.",
             "name": "physicalResourceId",
             "name_underscore": "physical_resource_id",
             "required": "No",

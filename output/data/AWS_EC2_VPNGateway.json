@@ -11,12 +11,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html",
     "variables": [
         {
+            "description": "The type of VPN connection this virtual private gateway supports. The only valid value is                \"ipsec.1\".",
             "name": "Type",
             "name_underscore": "type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",

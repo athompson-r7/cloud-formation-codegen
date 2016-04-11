@@ -1,24 +1,28 @@
 {
     "list_variables": [
         {
+            "description": "The IP (IPv4) address of a domain name server. You can specify up to four addresses.",
             "name": "DomainNameServers",
             "name_underscore": "domain_name_servers",
             "required": "Conditional; see note.",
             "type": "List of strings"
         },
         {
+            "description": "The IP address (IPv4) of a NetBIOS name server. You can specify up to four addresses.",
             "name": "NetbiosNameServers",
             "name_underscore": "netbios_name_servers",
             "required": "Conditional; see note.",
             "type": "List of strings"
         },
         {
+            "description": "An integer value indicating the NetBIOS node type:",
             "name": "NetbiosNodeType",
             "name_underscore": "netbios_node_type",
-            "required": "Required if NetBiosNameServers is specified;\n                  optional otherwise.",
+            "required": "Required if NetBiosNameServers is specified;                   optional otherwise.",
             "type": "List of numbers"
         },
         {
+            "description": "The IP address (IPv4) of a Network Time Protocol (NTP) server. You can specify up to four                   addresses.",
             "name": "NtpServers",
             "name_underscore": "ntp_servers",
             "required": "Conditional; see note.",
@@ -36,12 +40,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcp-options.html",
     "variables": [
         {
+            "description": "A domain name of your choice.",
             "name": "DomainName",
             "name_underscore": "domain_name",
             "required": "Conditional; see note.",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",

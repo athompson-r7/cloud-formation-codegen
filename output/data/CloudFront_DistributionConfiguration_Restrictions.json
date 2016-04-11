@@ -9,10 +9,11 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-restrictions.html",
     "variables": [
         {
+            "description": "The countries in which viewers are able to access your content.",
             "name": "GeoRestriction",
             "name_underscore": "geo_restriction",
             "required": "Yes",
-            "type": "CloudFront\n      DistributionConfig Restrictions GeoRestriction"
+            "type": "CloudFront       DistributionConfig Restrictions GeoRestriction"
         }
     ]
 }

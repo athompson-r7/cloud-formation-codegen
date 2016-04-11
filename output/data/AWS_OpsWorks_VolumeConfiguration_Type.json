@@ -9,36 +9,42 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfig.html",
     "variables": [
         {
+            "description": "The number of I/O operations per second (IOPS) to provision for the                   volume.",
             "name": "Iops",
             "name_underscore": "iops",
-            "required": "Conditional. If you specify io1 for the volume type,\n                  you must specify this property.",
+            "required": "Conditional. If you specify io1 for the volume type,                   you must specify this property.",
             "type": "Integer"
         },
         {
+            "description": "The volume mount point, such as /dev/sdh.",
             "name": "MountPoint",
             "name_underscore": "mount_point",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The number of disks in the volume.",
             "name": "NumberOfDisks",
             "name_underscore": "number_of_disks",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "The volume RAID level.",
             "name": "RaidLevel",
             "name_underscore": "raid_level",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The volume size.",
             "name": "Size",
             "name_underscore": "size",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "The type of volume, such as magnetic or SSD. For valid values, see VolumeConfiguration in                   the AWS OpsWorks API Reference.",
             "name": "VolumeType",
             "name_underscore": "volume_type",
             "required": "No",

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html",
     "variables": [
         {
+            "description": "The name of the dimension, from 1-255 characters in length.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The value representing the dimension measurement, from 1-255 characters in length.",
             "name": "Value",
             "name_underscore": "value",
             "required": "Yes",

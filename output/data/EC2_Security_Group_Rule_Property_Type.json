@@ -9,48 +9,56 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-rule.html",
     "variables": [
         {
+            "description": "Specifies a CIDR range.",
             "name": "CidrIp",
             "name_underscore": "cidr_ip",
-            "required": "Conditional If you specify\n                     SourceSecurityGroupName or\n                     SourceSecurityGroupId, do not specify\n                     CidrIp.",
+            "required": "Conditional If you specify                      SourceSecurityGroupName or                      SourceSecurityGroupId, do not specify                      CidrIp.",
             "type": "String"
         },
         {
+            "description": "Specifies the GroupId of the destination Amazon VPC security group.",
             "name": "DestinationSecurityGroupId (SecurityGroupEgress only)",
             "name_underscore": "destination_security_group_id (security_group_egress only)",
             "required": "Conditional Cannot be used when specifying a CIDR IP address.",
             "type": "String"
         },
         {
+            "description": "The start of port range for the TCP and UDP protocols, or an ICMP type number.                   An ICMP type number of -1 indicates a wildcard (i.e., any ICMP type                   number).",
             "name": "FromPort",
             "name_underscore": "from_port",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "An IP protocol name or number. For valid values, go to the IpProtocol parameter                   in AuthorizeSecurityGroupIngress",
             "name": "IpProtocol",
             "name_underscore": "ip_protocol",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "For VPC security groups only. Specifies the ID of the                   Amazon EC2 Security Group to allow access. You can use the                      Ref intrinsic function to refer to the logical ID of a                   security group defined in the same template.",
             "name": "SourceSecurityGroupId (SecurityGroupIngress only)",
             "name_underscore": "source_security_group_id (security_group_ingress only)",
-            "required": "Conditional. If you specify CidrIp, do not specify\n                     SourceSecurityGroupId.",
+            "required": "Conditional. If you specify CidrIp, do not specify                      SourceSecurityGroupId.",
             "type": "String"
         },
         {
+            "description": "For non-VPC security groups only. Specifies the name of                   the Amazon EC2 Security Group to use for access. You can use the                      Ref intrinsic function to refer to the logical name of a                   security group that is defined in the same template.",
             "name": "SourceSecurityGroupName (SecurityGroupIngress only)",
             "name_underscore": "source_security_group_name (security_group_ingress only)",
-            "required": "Conditional. If you specify CidrIp, do not\n                  specify SourceSecurityGroupName.",
+            "required": "Conditional. If you specify CidrIp, do not                   specify SourceSecurityGroupName.",
             "type": "String"
         },
         {
+            "description": "Specifies the AWS Account ID of the owner of the Amazon EC2 Security Group that                   is specified in the SourceSecurityGroupName property.",
             "name": "SourceSecurityGroupOwnerId (SecurityGroupIngress only)",
             "name_underscore": "source_security_group_owner_id (security_group_ingress only)",
-            "required": "Conditional. If you specify\n                     SourceSecurityGroupName and that security group is owned\n                  by a different account than the account creating the stack, you must specify the\n                     SourceSecurityGroupOwnerId; otherwise, this property is\n                  optional.",
+            "required": "Conditional. If you specify                      SourceSecurityGroupName and that security group is owned                   by a different account than the account creating the stack, you must specify the                      SourceSecurityGroupOwnerId; otherwise, this property is                   optional.",
             "type": "String"
         },
         {
+            "description": "The end of port range for the TCP and UDP protocols, or an ICMP code. An ICMP                   code of -1 indicates a wildcard (i.e., any ICMP code).",
             "name": "ToPort",
             "name_underscore": "to_port",
             "required": "Yes",

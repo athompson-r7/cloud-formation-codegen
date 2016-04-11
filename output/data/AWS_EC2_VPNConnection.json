@@ -11,30 +11,35 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html",
     "variables": [
         {
+            "description": "The type of VPN connection this virtual private gateway supports.",
             "name": "Type",
             "name_underscore": "type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the customer gateway. This can either be an embedded JSON object or a                   reference to a Gateway ID.",
             "name": "CustomerGatewayId",
             "name_underscore": "customer_gateway_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Indicates whether the VPN connection requires static routes.",
             "name": "StaticRoutesOnly",
             "name_underscore": "static_routes_only",
-            "required": "Conditional: If you are creating a VPN\n                  connection for a device that does not support Border Gateway Protocol (BGP), you\n                  must specify true.",
+            "required": "Conditional: If you are creating a VPN                   connection for a device that does not support Border Gateway Protocol (BGP), you                   must specify true.",
             "type": "Boolean"
         },
         {
+            "description": "The tags that you want to attach to the resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags."
         },
         {
+            "description": "The ID of the virtual private gateway. This can either be an embedded JSON                   object or a reference to a Gateway ID.",
             "name": "VpnGatewayId",
             "name_underscore": "vpn_gateway_id",
             "required": "Yes",

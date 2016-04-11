@@ -9,39 +9,45 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html",
     "variables": [
         {
+            "description": "The CIDR address block used for the destination match. For example, \"0.0.0.0/0\".                   Routing decisions are based on the most specific match.",
             "name": "DestinationCidrBlock",
             "name_underscore": "destination_cidr_block",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of an Internet gateway or virtual private gateway that is attached to                   your VPC. For example: \"igw-eaad4883\".",
             "name": "GatewayId",
             "name_underscore": "gateway_id",
-            "required": "Conditional. You must specify only one of the\n                  following properties: GatewayId, InstanceId,\n                     NetworkInterfaceId, or VpcPeeringConnectionId.",
+            "required": "Conditional. You must specify only one of the                   following properties: GatewayId, InstanceId,                      NetworkInterfaceId, or VpcPeeringConnectionId.",
             "type": "String"
         },
         {
+            "description": "The ID of a NAT instance in your VPC. For example, \"i-1a2b3c4d\".",
             "name": "InstanceId",
             "name_underscore": "instance_id",
-            "required": "Conditional. You must specify only one of the\n                  following properties: GatewayId, InstanceId,\n                     NetworkInterfaceId, or VpcPeeringConnectionId.",
+            "required": "Conditional. You must specify only one of the                   following properties: GatewayId, InstanceId,                      NetworkInterfaceId, or VpcPeeringConnectionId.",
             "type": "String"
         },
         {
+            "description": "Allows the routing of network interface IDs.",
             "name": "NetworkInterfaceId",
             "name_underscore": "network_interface_id",
-            "required": "Conditional. You must specify only one of the\n                  following properties: GatewayId, InstanceId,\n                     NetworkInterfaceId, or VpcPeeringConnectionId.",
+            "required": "Conditional. You must specify only one of the                   following properties: GatewayId, InstanceId,                      NetworkInterfaceId, or VpcPeeringConnectionId.",
             "type": "String"
         },
         {
+            "description": "The ID of the route table where the route will                   be added.",
             "name": "RouteTableId",
             "name_underscore": "route_table_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of a VPC peering connection.",
             "name": "VpcPeeringConnectionId",
             "name_underscore": "vpc_peering_connection_id",
-            "required": "Conditional. You must specify only one of the\n                  following properties: GatewayId, InstanceId,\n                     NetworkInterfaceId, or VpcPeeringConnectionId.",
+            "required": "Conditional. You must specify only one of the                   following properties: GatewayId, InstanceId,                      NetworkInterfaceId, or VpcPeeringConnectionId.",
             "type": "String"
         }
     ]

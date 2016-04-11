@@ -9,42 +9,49 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html",
     "variables": [
         {
+            "description": "The name of the Auto Scaling group for the lifecycle hook.",
             "name": "AutoScalingGroupName",
             "name_underscore": "auto_scaling_group_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if                   an unexpected failure occurs.",
             "name": "DefaultResult",
             "name_underscore": "default_result",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The amount of time that can elapse before the lifecycle hook times out. When                   the lifecycle hook times out, Auto Scaling performs the action that you specified in the                   DefaultResult property.",
             "name": "HeartbeatTimeout",
             "name_underscore": "heartbeat_timeout",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The state of the Amazon EC2 instance to which you want to attach the lifecycle                   hook.",
             "name": "LifecycleTransition",
             "name_underscore": "lifecycle_transition",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Additional information that you want to include when Auto Scaling sends a message to                   the notification target.",
             "name": "NotificationMetadata",
             "name_underscore": "notification_metadata",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The Amazon resource name (ARN) of the notification target that Auto Scaling uses to                   notify you when an instance is in the transition state for the lifecycle hook. You                   can specify an Amazon SQS queue or an Amazon SNS topic. The notification message includes                   the following information: lifecycle action token, user account ID, Auto Scaling group                   name, lifecycle hook name, instance ID, lifecycle transition, and notification                   metadata.",
             "name": "NotificationTargetARN",
             "name_underscore": "notification_target_arn",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ARN of the IAM role that allows the Auto Scaling group to publish to the                   specified notification target. The role requires permissions to Amazon SNS and                   Amazon SQS.",
             "name": "RoleARN",
             "name_underscore": "role_arn",
             "required": "Yes",

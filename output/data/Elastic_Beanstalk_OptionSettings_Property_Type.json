@@ -9,18 +9,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html",
     "variables": [
         {
+            "description": "A unique namespace identifying the option's associated AWS resource.",
             "name": "Namespace",
             "name_underscore": "namespace",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of the configuration option. For a list of options that can be used                   here, see Option                      Values in the AWS Elastic Beanstalk Developer                      Guide.",
             "name": "OptionName",
             "name_underscore": "option_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The value of the setting.",
             "name": "Value",
             "name_underscore": "value",
             "required": "Yes",

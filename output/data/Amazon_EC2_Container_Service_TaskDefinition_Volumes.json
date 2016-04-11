@@ -9,16 +9,18 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html",
     "variables": [
         {
+            "description": "The name of the volume. To specify mount points in your container definitions,                   use the value of this property.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Determines whether your data volume persists on the host container instance and                   at the location where it is stored.",
             "name": "Host",
             "name_underscore": "host",
             "required": "No",
-            "type": "Amazon EC2 Container Service TaskDefinition Volumes\n      Host"
+            "type": "Amazon EC2 Container Service TaskDefinition Volumes       Host"
         }
     ]
 }

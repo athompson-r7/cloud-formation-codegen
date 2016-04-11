@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-configurationtemplate-sourceconfiguration.html",
     "variables": [
         {
+            "description": "The name of the Elastic Beanstalk application that contains the configuration template that                   you want to use.",
             "name": "ApplicationName",
             "name_underscore": "application_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of the configuration template.",
             "name": "TemplateName",
             "name_underscore": "template_name",
             "required": "Yes",

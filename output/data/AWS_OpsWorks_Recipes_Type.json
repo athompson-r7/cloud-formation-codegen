@@ -1,30 +1,35 @@
 {
     "list_variables": [
         {
+            "description": "Custom recipe names to be run following a Configure event. The event occurs on                   all of the stack's instances when an instance enters or leaves the online                   state.",
             "name": "Configure",
             "name_underscore": "configure",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "Custom recipe names to be run following a Deploy event. The event occurs when                   you run a deploy command, typically to deploy an application to a set                   of application server instances.",
             "name": "Deploy",
             "name_underscore": "deploy",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "Custom recipe names to be run following a Setup event. This event                   occurs on a new instance after it successfully boots.",
             "name": "Setup",
             "name_underscore": "setup",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "Custom recipe names to be run following a Shutdown event. This                   event occurs after you direct AWS OpsWorks to shut an instance down before the associated                   Amazon EC2 instance is actually terminated.",
             "name": "Shutdown",
             "name_underscore": "shutdown",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "Custom recipe names to be run following a Undeploy event. This                   event occurs when you delete an app or run an undeploy command to                   remove an app from a set of application server instances.",
             "name": "Undeploy",
             "name_underscore": "undeploy",
             "required": "No",

@@ -1,24 +1,28 @@
 {
     "list_variables": [
         {
+            "description": "A list of cache security group names to associate with this replication group.                   If you specify the SecurityGroupIds property, do not specify this                   property; you can specify only one.",
             "name": "CacheSecurityGroupNames",
             "name_underscore": "cache_security_group_names",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of Availability Zones (AZs) in which the cache clusters in this                   replication group are created.",
             "name": "PreferredCacheClusterAZs",
             "name_underscore": "preferred_cache_cluster_a_zs",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of Amazon Virtual Private Cloud (Amazon VPC) security groups to associate with this replication                   group. Use this property only when you are creating a replication group in a VPC.                   If you specify the CacheSecurityGroupNames property, do not specify                   this property; you can specify only one.",
             "name": "SecurityGroupIds",
             "name_underscore": "security_group_ids",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A single-element string list that specifies an ARN of a Redis                      .rdb snapshot file that is stored in Amazon Simple Storage Service (Amazon S3). The                   snapshot file populates the node group. The Amazon S3 object name in the ARN cannot                   contain commas. For example, you can specify                      arn:aws:s3:::my_bucket/snapshot1.rdb.",
             "name": "SnapshotArns",
             "name_underscore": "snapshot_arns",
             "required": "No",
@@ -34,108 +38,126 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html",
     "variables": [
         {
+            "description": "Indicates whether Multi-AZ is enabled. When Multi-AZ is enabled, a read-only                   replica is automatically promoted to a read-write primary cluster if the existing                   primary cluster fails. If you specify true, you must specify a value                   greater than 1 for the NumCacheNodes property. By                   default, AWS CloudFormation sets the value to true.",
             "name": "AutomaticFailoverEnabled",
             "name_underscore": "automatic_failover_enabled",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Currently, this property isn't used by ElastiCache.",
             "name": "AutoMinorVersionUpgrade",
             "name_underscore": "auto_minor_version_upgrade",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The compute and memory capacity of nodes in the node group. To see valid                   values, see CreateReplicationGroup in the Amazon ElastiCache API                      Reference Guide.",
             "name": "CacheNodeType",
             "name_underscore": "cache_node_type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of the parameter group to associate with this replication                   group.",
             "name": "CacheParameterGroupName",
             "name_underscore": "cache_parameter_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of a cache subnet group to use for this replication group.",
             "name": "CacheSubnetGroupName",
             "name_underscore": "cache_subnet_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the cache engine to use for the cache clusters in this replication                   group. Currently, you can specify only redis.",
             "name": "Engine",
             "name_underscore": "engine",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The version number of the cache engine to use for the cache clusters in this                   replication group.",
             "name": "EngineVersion",
             "name_underscore": "engine_version",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The Amazon Resource Name (ARN) of the Amazon Simple Notification Service topic to which notifications are                   sent.",
             "name": "NotificationTopicArn",
             "name_underscore": "notification_topic_arn",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The number of cache clusters for this replication group. If automatic failover                   is enabled, you must specify a value greater than 1.",
             "name": "NumCacheClusters",
             "name_underscore": "num_cache_clusters",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "The port number on which each member of the replication group accepts                   connections.",
             "name": "Port",
             "name_underscore": "port",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The weekly time range during which system maintenance can occur. Use the                   following format to specify a time range: ddd:hh24:mi-ddd:hh24:mi                   (24H Clock UTC). For example, you can specify sun:22:00-sun:23:30 for                   Sunday from 10 PM to 11:30 PM.",
             "name": "PreferredMaintenanceWindow",
             "name_underscore": "preferred_maintenance_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The description of the replication group.",
             "name": "ReplicationGroupDescription",
             "name_underscore": "replication_group_description",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The number of days that ElastiCache retains automatic snapshots before deleting                   them.",
             "name": "SnapshotRetentionLimit",
             "name_underscore": "snapshot_retention_limit",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The time range (in UTC) when ElastiCache takes a daily snapshot of your node group.                   For example, you can specify 05:00-09:00.",
             "name": "SnapshotWindow",
             "name_underscore": "snapshot_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The DNS address of the primary read-write cache node.",
             "name": "PrimaryEndPoint.Address",
             "name_underscore": "primary_end_point.address",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The number of the port that the primary read-write cache engine is listening                      on.",
             "name": "PrimaryEndPoint.Port",
             "name_underscore": "primary_end_point.port",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A string with a list of endpoints for the read-only replicas. The order of                      the addresses map to the order of the ports from the                         ReadEndPoint.Ports attribute.",
             "name": "ReadEndPoint.Addresses",
             "name_underscore": "read_end_point.addresses",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A string with a list of ports for the read-only replicas. The order of the                      ports map to the order of the addresses from the                         ReadEndPoint.Addresses attribute.",
             "name": "ReadEndPoint.Ports",
             "name_underscore": "read_end_point.ports",
             "required": "No",

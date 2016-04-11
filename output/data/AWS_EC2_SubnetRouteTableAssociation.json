@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html",
     "variables": [
         {
+            "description": "The ID of the route table. This is commonly written as a reference to a route table declared                   elsewhere in the template. For example:",
             "name": "RouteTableId",
             "name_underscore": "route_table_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the subnet. This is commonly written as a reference to a subnet declared elsewhere in the                   template. For example:",
             "name": "SubnetId",
             "name_underscore": "subnet_id",
             "required": "Yes",

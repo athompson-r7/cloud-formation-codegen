@@ -1,21 +1,24 @@
 {
     "list_variables": [
         {
+            "description": "The names of groups to which you want to add the policy.",
             "name": "Groups",
             "name_underscore": "groups",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: Groups, Roles, or Users.",
+            "required": "Conditional. You must specify at least one of the following                   properties: Groups, Roles, or Users.",
             "type": "List of strings"
         },
         {
+            "description": "The names of AWS::IAM::Roles to                   attach to this policy.",
             "name": "Roles",
             "name_underscore": "roles",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: Groups, Roles, or Users.",
+            "required": "Conditional. You must specify at least one of the following                   properties: Groups, Roles, or Users.",
             "type": "List of strings"
         },
         {
+            "description": "The names of users for whom you want to add the policy.",
             "name": "Users",
             "name_underscore": "users",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: Groups, Roles, or Users.",
+            "required": "Conditional. You must specify at least one of the following                   properties: Groups, Roles, or Users.",
             "type": "List of strings"
         }
     ],
@@ -28,12 +31,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html",
     "variables": [
         {
+            "description": "A policy document that contains permissions to add to the specified users or                   groups.",
             "name": "PolicyDocument",
             "name_underscore": "policy_document",
             "required": "Yes",
             "type": "JSON object"
         },
         {
+            "description": "The name of the policy.",
             "name": "PolicyName",
             "name_underscore": "policy_name",
             "required": "Yes",

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobjects.html",
     "variables": [
         {
+            "description": "Key-value pairs that define the attributes of the parameter object.",
             "name": "Attributes",
             "name_underscore": "attributes",
             "required": "Yes",
-            "type": "AWS Data Pipeline\n      Parameter Objects Attributes"
+            "type": "AWS Data Pipeline       Parameter Objects Attributes"
         },
         {
+            "description": "The identifier of the parameter object.",
             "name": "Id",
             "name_underscore": "id",
             "required": "Yes",

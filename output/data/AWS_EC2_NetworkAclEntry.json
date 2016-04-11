@@ -9,48 +9,56 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html",
     "variables": [
         {
+            "description": "The CIDR range to allow or deny, in CIDR notation (e.g., 172.16.0.0/24).",
             "name": "CidrBlock",
             "name_underscore": "cidr_block",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Whether this rule applies to egress traffic from the subnet (\"true\") or ingress traffic to the                   subnet (\"false\").",
             "name": "Egress",
             "name_underscore": "egress",
             "required": "Yes",
             "type": "Boolean"
         },
         {
+            "description": "The Internet Control Message Protocol (ICMP) code and type.",
             "name": "Icmp",
             "name_underscore": "icmp",
-            "required": "Conditional required if specifying 1 (ICMP) for the protocol\n                  parameter.",
+            "required": "Conditional required if specifying 1 (ICMP) for the protocol                   parameter.",
             "type": "EC2 ICMP Property Type"
         },
         {
+            "description": "ID of the ACL where the entry will be created.",
             "name": "NetworkAclId",
             "name_underscore": "network_acl_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The range of port numbers for the UDP/TCP protocol.",
             "name": "PortRange",
             "name_underscore": "port_range",
-            "required": "Conditional Required if specifying 6 (TCP) or 17 (UDP) for the protocol\n               parameter.",
+            "required": "Conditional Required if specifying 6 (TCP) or 17 (UDP) for the protocol                parameter.",
             "type": "EC2 PortRange Property Type"
         },
         {
+            "description": "The IP protocol that the rule applies to. You must specify -1 or a                   protocol number (go to Protocol Numbers at iana.org). You can specify -1 for all                   protocols.",
             "name": "Protocol",
             "name_underscore": "protocol",
             "required": "Yes",
             "type": "Number"
         },
         {
+            "description": "Whether to allow or deny traffic that matches the rule; valid values are \"allow\" or \"deny\".",
             "name": "RuleAction",
             "name_underscore": "rule_action",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Rule number to assign to the entry (e.g., 100). This must be a positive integer                   from 1 to 32766.",
             "name": "RuleNumber",
             "name_underscore": "rule_number",
             "required": "Yes",

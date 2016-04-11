@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html",
     "variables": [
         {
+            "description": "Name of the application cookie used for stickiness.",
             "name": "CookieName",
             "name_underscore": "cookie_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of the policy being created. The name must be unique within the set of                   policies for this Load Balancer.",
             "name": "PolicyName",
             "name_underscore": "policy_name",
             "required": "Yes",

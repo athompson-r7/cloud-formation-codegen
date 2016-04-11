@@ -1,10 +1,11 @@
 {
     "list_variables": [
         {
+            "description": "The SNS subscriptions (endpoints) for this topic.",
             "name": "Subscription",
             "name_underscore": "subscription",
             "required": "No",
-            "type": "List of SNS\n                     Subscriptions"
+            "type": "List of SNS                      Subscriptions"
         }
     ],
     "mixins": [],
@@ -16,18 +17,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html",
     "variables": [
         {
+            "description": "A developer-defined string that can be used to identify this SNS topic.",
             "name": "DisplayName",
             "name_underscore": "display_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A name for the topic. If you don't specify a name, AWS CloudFormation generates a unique                   physical ID and uses that ID for the topic name. For more information, see Name Type.",
             "name": "TopicName",
             "name_underscore": "topic_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Returns the name for an Amazon SNS topic.",
             "name": "TopicName",
             "name_underscore": "topic_name",
             "required": "No",

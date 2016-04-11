@@ -9,36 +9,42 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.html",
     "variables": [
         {
+            "description": "The percentage of CPU utilization that triggers the starting or stopping of                   instances (scaling).",
             "name": "CpuThreshold",
             "name_underscore": "cpu_threshold",
             "required": "No",
             "type": "Number"
         },
         {
+            "description": "The amount of time (in minutes) after a scaling event occurs that AWS OpsWorks should                   ignore metrics and not start any additional scaling events.",
             "name": "IgnoreMetricsTime",
             "name_underscore": "ignore_metrics_time",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The number of instances to add or remove when the load exceeds a                   threshold.",
             "name": "InstanceCount",
             "name_underscore": "instance_count",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The degree of system load that triggers the starting or stopping of instances                   (scaling). For more information about how load is computed, see Load                      (computing).",
             "name": "LoadThreshold",
             "name_underscore": "load_threshold",
             "required": "No",
             "type": "Number"
         },
         {
+            "description": "The percentage of memory consumption that triggers the starting or stopping of                   instances (scaling).",
             "name": "MemoryThreshold",
             "name_underscore": "memory_threshold",
             "required": "No",
             "type": "Number"
         },
         {
+            "description": "The amount of time, in minutes, that the load must exceed a threshold before                   instances are added or removed.",
             "name": "ThresholdsWaitTime",
             "name_underscore": "thresholds_wait_time",
             "required": "No",

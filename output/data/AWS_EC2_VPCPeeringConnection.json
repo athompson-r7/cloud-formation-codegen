@@ -11,18 +11,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html",
     "variables": [
         {
+            "description": "The ID of the VPC with which you are creating the peering connection.",
             "name": "PeerVpcId",
             "name_underscore": "peer_vpc_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this                         resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags"
         },
         {
+            "description": "The ID of the VPC that is requesting a peering connection.",
             "name": "VpcId",
             "name_underscore": "vpc_id",
             "required": "Yes",

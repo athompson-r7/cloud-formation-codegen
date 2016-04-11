@@ -9,36 +9,42 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html",
     "variables": [
         {
+            "description": "CIDR range.",
             "name": "CidrIp",
             "name_underscore": "cidr_ip",
-            "required": "Conditional. Cannot be used when specifying a destination security\n            group.",
+            "required": "Conditional. Cannot be used when specifying a destination security             group.",
             "type": "String"
         },
         {
+            "description": "Specifies the group ID of the destination Amazon VPC security group.",
             "name": "DestinationSecurityGroupId",
             "name_underscore": "destination_security_group_id",
-            "required": "Conditional. Cannot be used when specifying a CIDR IP\n            address.",
+            "required": "Conditional. Cannot be used when specifying a CIDR IP             address.",
             "type": "String"
         },
         {
+            "description": "Start of port range for the TCP and UDP protocols, or an ICMP type number. If                   you specify icmp for the IpProtocol property, you can                   specify -1 as a wildcard (i.e., any ICMP type number).",
             "name": "FromPort",
             "name_underscore": "from_port",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "ID of the Amazon VPC security group to modify. This value can be a reference to an AWS::EC2::SecurityGroup resource that has a                   valid VpcId property or the ID of an existing Amazon VPC security group.",
             "name": "GroupId",
             "name_underscore": "group_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "IP protocol name or number. For valid values, see the IpProtocol parameter in AuthorizeSecurityGroupIngress",
             "name": "IpProtocol",
             "name_underscore": "ip_protocol",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "End of port range for the TCP and UDP protocols, or an ICMP code. If you                   specify icmp for the IpProtocol property, you can                   specify -1 as a wildcard (i.e., any ICMP code).",
             "name": "ToPort",
             "name_underscore": "to_port",
             "required": "Yes",

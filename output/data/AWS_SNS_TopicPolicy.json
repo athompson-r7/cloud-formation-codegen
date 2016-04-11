@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "The Amazon Resource Names (ARN) of the topics to which you want to add the policy.             You can use the Ref function to             specify an AWS::SNS::Topic             resource.",
             "name": "Topics",
             "name_underscore": "topics",
             "required": "Yes",
@@ -16,6 +17,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html",
     "variables": [
         {
+            "description": "A policy document that contains permissions to add to the specified SNS             topics.",
             "name": "PolicyDocument",
             "name_underscore": "policy_document",
             "required": "Yes",

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html",
     "variables": [
         {
+            "description": "Sets the desired minimum number of consistent reads of items (up to 1KB in                   size) per second for the specified table before Amazon DynamoDB balances the                   load.",
             "name": "ReadCapacityUnits",
             "name_underscore": "read_capacity_units",
             "required": "Yes",
             "type": "Number"
         },
         {
+            "description": "Sets the desired minimum number of consistent writes of items (up to 1KB in                   size) per second for the specified table before Amazon DynamoDB balances the                   load.",
             "name": "WriteCapacityUnits",
             "name_underscore": "write_capacity_units",
             "required": "Yes",

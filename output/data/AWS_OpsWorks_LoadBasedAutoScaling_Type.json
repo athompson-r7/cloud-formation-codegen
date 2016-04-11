@@ -9,22 +9,25 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html",
     "variables": [
         {
+            "description": "The threshold below which the instances are scaled down (stopped). If the load                   falls below this threshold for a specified amount of time, AWS OpsWorks stops a specified                   number of instances.",
             "name": "DownScaling",
             "name_underscore": "down_scaling",
             "required": "No",
-            "type": "AWS OpsWorks\n      AutoScalingThresholds Type"
+            "type": "AWS OpsWorks       AutoScalingThresholds Type"
         },
         {
+            "description": "Whether to enable automatic load-based scaling for the layer.",
             "name": "Enable",
             "name_underscore": "enable",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The threshold above which the instances are scaled up (added). If the load                   exceeds this thresholds for a specified amount of time, AWS OpsWorks starts a specified                   number of instances.",
             "name": "UpScaling",
             "name_underscore": "up_scaling",
             "required": "No",
-            "type": "AWS OpsWorks\n      AutoScalingThresholds Type"
+            "type": "AWS OpsWorks       AutoScalingThresholds Type"
         }
     ]
 }

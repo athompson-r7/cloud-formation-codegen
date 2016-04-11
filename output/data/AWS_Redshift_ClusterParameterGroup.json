@@ -9,22 +9,25 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html",
     "variables": [
         {
+            "description": "A description of the parameter group.",
             "name": "Description",
             "name_underscore": "description",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The Amazon Redshift engine version that applies to this cluster parameter group. The                   cluster engine version determines the set of parameters that you can specify in                   the Parameters property.",
             "name": "ParameterGroupFamily",
             "name_underscore": "parameter_group_family",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A list of parameter names and values that are allowed by the Amazon Redshift engine                   version that you specified in the ParameterGroupFamily property. For                   more information, see Amazon Redshift Parameter Groups in the                   Amazon Redshift Cluster Management Guide.",
             "name": "Parameters",
             "name_underscore": "parameters",
             "required": "No",
-            "type": "Amazon Redshift Parameter\n      Type"
+            "type": "Amazon Redshift Parameter       Type"
         }
     ]
 }

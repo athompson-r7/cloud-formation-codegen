@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "A list of security groups that you want to associate with this cluster.",
             "name": "ClusterSecurityGroups",
             "name_underscore": "cluster_security_groups",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of VPC security groups that are associated with this cluster.",
             "name": "VpcSecurityGroupIds",
             "name_underscore": "vpc_security_group_ids",
             "required": "No",
@@ -22,144 +24,168 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html",
     "variables": [
         {
+            "description": "When a new version of the Amazon Redshift is released, indicates whether upgrades can be                   applied to the engine that is running on the cluster. The upgrades are applied                   during the maintenance window.",
             "name": "AllowVersionUpgrade",
             "name_underscore": "allow_version_upgrade",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The number of days that automated snapshots are retained. If you set the value                   to 0, automated snapshots are disabled.",
             "name": "AutomatedSnapshotRetentionPeriod",
             "name_underscore": "automated_snapshot_retention_period",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The Amazon EC2 Availability Zone in which you want to provision your Amazon Redshift cluster.                   For example, if you have several Amazon EC2 instances running in a specific                   Availability Zone, you might want the cluster to be provisioned in the same zone                   in order to decrease network latency.",
             "name": "AvailabilityZone",
             "name_underscore": "availability_zone",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the parameter group that you want to associate with this                   cluster.",
             "name": "ClusterParameterGroupName",
             "name_underscore": "cluster_parameter_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of a cluster subnet group that you want to associate with this                   cluster.",
             "name": "ClusterSubnetGroupName",
             "name_underscore": "cluster_subnet_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The type of cluster. You can specify single-node or                      multi-node.",
             "name": "ClusterType",
             "name_underscore": "cluster_type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The Amazon Redshift engine version that you want to deploy on the cluster.",
             "name": "ClusterVersion",
             "name_underscore": "cluster_version",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the first database that is created when the cluster is                   created.",
             "name": "DBName",
             "name_underscore": "db_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The Elastic IP (EIP) address for the cluster.",
             "name": "ElasticIp",
             "name_underscore": "elastic_ip",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Indicates whether the data in the cluster is encrypted at rest.",
             "name": "Encrypted",
             "name_underscore": "encrypted",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Specifies the name of the HSM client certificate that the Amazon Redshift cluster uses to                   retrieve the data encryption keys stored in an HSM.",
             "name": "HsmClientCertificateIdentifier",
             "name_underscore": "hsm_client_certificate_identifier",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Specifies the name of the HSM configuration that contains the information that                   the Amazon Redshift cluster can use to retrieve and store keys in an HSM.",
             "name": "HsmConfigurationIdentifier",
             "name_underscore": "hsm_configuration_identifier",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The user name that is associated with the master user account for this                   cluster.",
             "name": "MasterUsername",
             "name_underscore": "master_username",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The  password associated with the master user account for this cluster.",
             "name": "MasterUserPassword",
             "name_underscore": "master_user_password",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The node type that is provisioned for this cluster.",
             "name": "NodeType",
             "name_underscore": "node_type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The number of compute nodes in the cluster. If you specify                      multi-node for the ClusterType parameter, you must                   specify a number greater than 1.",
             "name": "NumberOfNodes",
             "name_underscore": "number_of_nodes",
             "required": "Conditional",
             "type": "Integer"
         },
         {
+            "description": "When you restore from a snapshot from another AWS account, the 12-digit AWS                   account ID that contains that snapshot.",
             "name": "OwnerAccount",
             "name_underscore": "owner_account",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The port number on which the cluster accepts incoming connections.",
             "name": "Port",
             "name_underscore": "port",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The weekly time range (in UTC) during which automated cluster maintenance can                   occur.  The format of the time range is                   ddd:hh24:mi-ddd:hh24:mi.",
             "name": "PreferredMaintenanceWindow",
             "name_underscore": "preferred_maintenance_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Indicates whether the cluster can be accessed from a public network.",
             "name": "PubliclyAccessible",
             "name_underscore": "publicly_accessible",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The name of the cluster the source snapshot was created from.",
             "name": "SnapshotClusterIdentifier",
             "name_underscore": "snapshot_cluster_identifier",
-            "required": "Conditional. This property is required if your IAM policy includes\n                  a restriction on the cluster name, where the resource element specifies anything\n                  other than the wildcard character (*) for the cluster name.",
+            "required": "Conditional. This property is required if your IAM policy includes                   a restriction on the cluster name, where the resource element specifies anything                   other than the wildcard character (*) for the cluster name.",
             "type": "String"
         },
         {
+            "description": "The name of the snapshot from which to create a new cluster.",
             "name": "SnapshotIdentifier",
             "name_underscore": "snapshot_identifier",
-            "required": "Conditional. If you specified the\n                     SnapshotClusterIdentifier property, you must specify this\n                  property.",
+            "required": "Conditional. If you specified the                      SnapshotClusterIdentifier property, you must specify this                   property.",
             "type": "String"
         },
         {
+            "description": "The connection endpoint for the Amazon Redshift cluster. For example:                      examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com                   .",
             "name": "Endpoint.Address",
             "name_underscore": "endpoint.address",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The port number on which the Amazon Redshift cluster accepts connections. For example:                      5439.",
             "name": "Endpoint.Port",
             "name_underscore": "endpoint.port",
             "required": "No",

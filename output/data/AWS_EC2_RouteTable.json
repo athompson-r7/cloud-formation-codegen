@@ -11,12 +11,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route-table.html",
     "variables": [
         {
+            "description": "The ID of the VPC where the route table will be created.",
             "name": "VpcId",
             "name_underscore": "vpc_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this route table.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",

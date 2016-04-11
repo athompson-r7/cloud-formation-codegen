@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "A list of existing Amazon SNS topics where notifications about stack events are                   sent.",
             "name": "NotificationARNs",
             "name_underscore": "notification_ar_ns",
             "required": "No",
@@ -16,24 +17,28 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html",
     "variables": [
         {
+            "description": "The set of parameters passed to AWS CloudFormation when this nested stack is created.",
             "name": "Parameters",
             "name_underscore": "parameters",
-            "required": "Conditional (required if the nested stack\n                  requires input parameters).",
+            "required": "Conditional (required if the nested stack                   requires input parameters).",
             "type": "CloudFormation Stack Parameters Property Type"
         },
         {
+            "description": "The URL of a template that specifies the stack that you want to create as a                   resource. The template must be stored on an Amazon S3 bucket, so the URL must have the                   form:                      https://s3.amazonaws.com/.../TemplateName.template",
             "name": "TemplateURL",
             "name_underscore": "template_url",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The length of time, in minutes, that AWS CloudFormation waits for the nested stack to reach                   the CREATE_COMPLETE state. The default is no timeout. When AWS CloudFormation detects that the                   nested stack has reached the CREATE_COMPLETE state, it marks the nested stack                   resource as CREATE_COMPLETE in the parent stack and resumes creating the parent                   stack. If the timeout period expires before the nested stack reaches                   CREATE_COMPLETE, AWS CloudFormation marks the nested stack as failed and rolls back both the                   nested stack and parent stack.",
             "name": "TimeoutInMinutes",
             "name_underscore": "timeout_in_minutes",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Returns: The output value from the specified nested                      stack where NestedStackOutputName is the name of the                      output value.",
             "name": "Outputs.NestedStackOutputName",
             "name_underscore": "outputs.nested_stack_output_name",
             "required": "No",

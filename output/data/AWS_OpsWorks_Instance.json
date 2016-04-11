@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "The IDs of the AWS OpsWorks layers to associate with this instance.",
             "name": "LayerIds",
             "name_underscore": "layer_ids",
             "required": "Yes",
@@ -16,82 +17,95 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html",
     "variables": [
         {
+            "description": "The ID of the custom Amazon Machine Image (AMI) to be used to create the                   instance. The AMI should be based on one of the standard AWS OpsWorks APIs.",
             "name": "AmiId",
             "name_underscore": "ami_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The instance architecture.",
             "name": "Architecture",
             "name_underscore": "architecture",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "For scaling instances, the type of scaling. If you specify load-based scaling,                   do not specify a time-based scaling configuration. For valid values, see CreateInstance in the                      AWS OpsWorks API Reference.",
             "name": "AutoScalingType",
             "name_underscore": "auto_scaling_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The instance Availability Zone.",
             "name": "AvailabilityZone",
             "name_underscore": "availability_zone",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Whether the instance is optimized for Amazon Elastic Block Store (Amazon EBS) I/O. If you specify an                   Amazon EBS-optimized instance type, AWS OpsWorks enables EBS optimization by default. For more                   information, see Amazon EBS-Optimized                      Instances in the Amazon EC2 User Guide for Linux Instances.",
             "name": "EbsOptimized",
             "name_underscore": "ebs_optimized",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Whether to install operating system and package updates when the instance                   boots.",
             "name": "InstallUpdatesOnBoot",
             "name_underscore": "install_updates_on_boot",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The instance type, which must be supported by AWS OpsWorks. For more information, see                      CreateInstance in the                      AWS OpsWorks API Reference.",
             "name": "InstanceType",
             "name_underscore": "instance_type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The instance operating system. For more information, see CreateInstance in the                      AWS OpsWorks API Reference.",
             "name": "Os",
             "name_underscore": "os",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The root device type of the instance.",
             "name": "RootDeviceType",
             "name_underscore": "root_device_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The SSH key name of the instance.",
             "name": "SshKeyName",
             "name_underscore": "ssh_key_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The ID of the AWS OpsWorks stack that this instance will be associated with.",
             "name": "StackId",
             "name_underscore": "stack_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the instance's subnet. If the stack is running in a VPC, you can use                   this parameter to override the stack's default subnet ID value and direct AWS OpsWorks to                   launch the instance in a different subnet.",
             "name": "SubnetId",
             "name_underscore": "subnet_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The time-based scaling configuration for the instance.",
             "name": "TimeBasedAutoScaling",
             "name_underscore": "time_based_auto_scaling",
             "required": "No",
-            "type": "AWS OpsWorks\n      TimeBasedAutoScaling Type"
+            "type": "AWS OpsWorks       TimeBasedAutoScaling Type"
         }
     ]
 }

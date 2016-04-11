@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktags.html",
     "variables": [
         {
+            "description": "The key name of the tag.",
             "name": "Key",
             "name_underscore": "key",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The value for the tag.",
             "name": "Value",
             "name_underscore": "value",
             "required": "Yes",

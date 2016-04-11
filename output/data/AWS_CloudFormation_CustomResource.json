@@ -9,6 +9,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html",
     "variables": [
         {
+            "description": "The service token that was given to the template developer by the service provider                   to access the service, such as an Amazon SNS topic ARN or Lambda function ARN. The                   service token must be from the same region in which you are creating the                   stack.",
             "name": "ServiceToken",
             "name_underscore": "service_token",
             "required": "Yes",

@@ -11,42 +11,49 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html",
     "variables": [
         {
+            "description": "The CIDR block you want the VPC to cover. For example: \"10.0.0.0/16\".",
             "name": "CidrBlock",
             "name_underscore": "cidr_block",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies whether DNS resolution is supported for the VPC. If this attribute is                      true, the Amazon DNS server resolves DNS hostnames for your                   instances to their corresponding IP addresses; otherwise, it does not. By default                   the value is set to true.",
             "name": "EnableDnsSupport",
             "name_underscore": "enable_dns_support",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Specifies whether the instances launched in the VPC get DNS hostnames. If this                   attribute is true, instances in the VPC get DNS hostnames; otherwise,                   they do not. You can only set EnableDnsHostnames to true                   if you also set the EnableDnsSupport attribute to true.                   By default, the value is set to false.",
             "name": "EnableDnsHostnames",
             "name_underscore": "enable_dns_hostnames",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The allowed tenancy of instances launched into the VPC.",
             "name": "InstanceTenancy",
             "name_underscore": "instance_tenancy",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this VPC.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags"
         },
         {
+            "description": "The default network ACL ID that is associated with the VPC. For example,                         acl-814dafe3.",
             "name": "DefaultNetworkAcl",
             "name_underscore": "default_network_acl",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The default security group ID that is associated with the VPC. For example,                         sg-b178e0d3.",
             "name": "DefaultSecurityGroup",
             "name_underscore": "default_security_group",
             "required": "No",

@@ -9,54 +9,63 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html",
     "variables": [
         {
+            "description": "Specifies a CIDR range.",
             "name": "CidrIp",
             "name_underscore": "cidr_ip",
-            "required": "Conditional. If you specify\n                     SourceSecurityGroupName, do not specify\n                     CidrIp.",
+            "required": "Conditional. If you specify                      SourceSecurityGroupName, do not specify                      CidrIp.",
             "type": "String"
         },
         {
+            "description": "Start of port range for the TCP and UDP protocols, or an ICMP type number.                   If you specify icmp for the IpProtocol property, you can                   specify -1 as a wildcard (i.e., any ICMP type number).",
             "name": "FromPort",
             "name_underscore": "from_port",
             "required": "Yes, for ICMP and any protocol that uses ports.",
             "type": "Integer"
         },
         {
+            "description": "ID of the Amazon EC2 or VPC security group to modify. The group must belong to your                   account.",
             "name": "GroupId",
             "name_underscore": "group_id",
-            "required": "Conditional. You must specify the GroupName\n                  property or the GroupId property. For security groups that\n                  are in a VPC, you must use the GroupId property. For example,\n                     EC2-VPC\n                  accounts must use the GroupId property.",
+            "required": "Conditional. You must specify the GroupName                   property or the GroupId property. For security groups that                   are in a VPC, you must use the GroupId property. For example,                      EC2-VPC                   accounts must use the GroupId property.",
             "type": "String"
         },
         {
+            "description": "Name of the Amazon EC2 security group (non-VPC security group) to modify. This value                   can be a reference to an AWS::EC2::SecurityGroup resource or the name of an existing Amazon EC2                   security group.",
             "name": "GroupName",
             "name_underscore": "group_name",
-            "required": "Conditional. You must specify the GroupName\n                  property or the GroupId property. For security groups that\n                  are in a VPC, you must use the GroupId property. For example,\n                     EC2-VPC\n                  accounts must use the GroupId property.",
+            "required": "Conditional. You must specify the GroupName                   property or the GroupId property. For security groups that                   are in a VPC, you must use the GroupId property. For example,                      EC2-VPC                   accounts must use the GroupId property.",
             "type": "String"
         },
         {
+            "description": "IP protocol name or number. For valid values, see the IpProtocol parameter                   in AuthorizeSecurityGroupIngress",
             "name": "IpProtocol",
             "name_underscore": "ip_protocol",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies the ID of the source security group or uses the Ref                   intrinsic function to refer to the logical ID of a security group defined in the                   same template.",
             "name": "SourceSecurityGroupId",
             "name_underscore": "source_security_group_id",
-            "required": "Conditional. If you specify CidrIp, do not\n                  specify SourceSecurityGroupId.",
+            "required": "Conditional. If you specify CidrIp, do not                   specify SourceSecurityGroupId.",
             "type": "String"
         },
         {
+            "description": "Specifies the name of the Amazon EC2 security group (non-VPC security group) to                   allow access or uses the Ref intrinsic function to refer to the                   logical name of a security group defined in the same template. For instances in a                   VPC, specify the SourceSecurityGroupId property.",
             "name": "SourceSecurityGroupName",
             "name_underscore": "source_security_group_name",
-            "required": "Conditional. If you specify CidrIp, do not\n                  specify SourceSecurityGroupName.",
+            "required": "Conditional. If you specify CidrIp, do not                   specify SourceSecurityGroupName.",
             "type": "String"
         },
         {
+            "description": "Specifies the AWS Account ID of the owner of the Amazon EC2 security group                   specified in the SourceSecurityGroupName property.",
             "name": "SourceSecurityGroupOwnerId",
             "name_underscore": "source_security_group_owner_id",
-            "required": "Conditional. If you specify\n                     SourceSecurityGroupName and that security group is owned\n                  by a different account than the account creating the stack, you must specify the\n                     SourceSecurityGroupOwnerId; otherwise, this property is\n                  optional.",
+            "required": "Conditional. If you specify                      SourceSecurityGroupName and that security group is owned                   by a different account than the account creating the stack, you must specify the                      SourceSecurityGroupOwnerId; otherwise, this property is                   optional.",
             "type": "String"
         },
         {
+            "description": "End of port range for the TCP and UDP protocols, or an ICMP code. If you                   specify icmp for the IpProtocol property, you can                   specify -1 as a wildcard (i.e., any ICMP code).",
             "name": "ToPort",
             "name_underscore": "to_port",
             "required": "Yes, for ICMP and any protocol that uses ports.",

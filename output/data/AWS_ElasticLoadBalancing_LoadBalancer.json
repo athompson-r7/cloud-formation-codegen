@@ -40,7 +40,7 @@
             "name": "SecurityGroups",
             "name_underscore": "security_groups",
             "required": "No",
-            "type": "A list of security groups assigned to your load balancer within your\n                  virtual private cloud (VPC)."
+            "type": "A list of security groups assigned to your load balancer within your                   virtual private cloud (VPC)."
         },
         {
             "name": "Subnets",
@@ -69,7 +69,7 @@
             "name": "ConnectionDrainingPolicy",
             "name_underscore": "connection_draining_policy",
             "required": "No",
-            "type": "Elastic Load Balancing\n      ConnectionDrainingPolicy"
+            "type": "Elastic Load Balancing       ConnectionDrainingPolicy"
         },
         {
             "name": "ConnectionSettings",

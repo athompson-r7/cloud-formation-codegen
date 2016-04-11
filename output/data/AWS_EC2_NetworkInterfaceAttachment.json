@@ -9,24 +9,28 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html",
     "variables": [
         {
+            "description": "Whether to delete the network interface when the instance terminates. By                   default, this value is set to True.",
             "name": "DeleteOnTermination",
             "name_underscore": "delete_on_termination",
             "required": "No",
             "type": "Boolean."
         },
         {
+            "description": "The network interface's position in the attachment order. For example, the                   first attached network interface has a DeviceIndex of                   0.",
             "name": "DeviceIndex",
             "name_underscore": "device_index",
             "required": "Yes.",
             "type": "String."
         },
         {
+            "description": "The ID of the instance to which you will attach the ENI.",
             "name": "InstanceId",
             "name_underscore": "instance_id",
             "required": "Yes.",
             "type": "String."
         },
         {
+            "description": "The ID of the ENI that you want to attach.",
             "name": "NetworkInterfaceId",
             "name_underscore": "network_interface_id",
             "required": "Yes.",

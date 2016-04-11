@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-property-redshift-clusterparametergroup-parameter.html",
     "variables": [
         {
+            "description": "The name of the parameter.",
             "name": "ParameterName",
             "name_underscore": "parameter_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The value of the parameter.",
             "name": "ParameterValue",
             "name_underscore": "parameter_value",
             "required": "Yes",

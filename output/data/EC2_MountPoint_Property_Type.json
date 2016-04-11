@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-mount-point.html",
     "variables": [
         {
+            "description": "How the device is exposed to the instance (such as /dev/sdh, or xvdh).",
             "name": "Device",
             "name_underscore": "device",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the Amazon EBS volume. The volume and instance must be within the same Availability Zone                and the instance must be running.",
             "name": "VolumeId",
             "name_underscore": "volume_id",
             "required": "Yes",

@@ -9,18 +9,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html",
     "variables": [
         {
+            "description": "The name of the Cache Security Group to authorize.",
             "name": "CacheSecurityGroupName",
             "name_underscore": "cache_security_group_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Name of the EC2 Security Group to include in the authorization.",
             "name": "EC2SecurityGroupName",
             "name_underscore": "ec2_security_group_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies the AWS Account ID of the owner of the EC2 security group specified                   in the EC2SecurityGroupName property. The AWS access key ID is not an acceptable                   value.",
             "name": "EC2SecurityGroupOwnerId",
             "name_underscore": "ec2_security_group_owner_id",
             "required": "No",

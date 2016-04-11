@@ -11,24 +11,28 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html",
     "variables": [
         {
+            "description": "The customer gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).",
             "name": "BgpAsn",
             "name_underscore": "bgp_asn",
             "required": "Yes",
             "type": "Number BgpAsn is always an integer value."
         },
         {
+            "description": "The internet-routable IP address for the customer gateway's outside interface. The address must be                static.",
             "name": "IpAddress",
             "name_underscore": "ip_address",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The tags that you want to attach to the resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags."
         },
         {
+            "description": "The type of VPN connection that this customer gateway supports.",
             "name": "Type",
             "name_underscore": "type",
             "required": "Yes",

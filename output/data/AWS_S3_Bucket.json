@@ -11,66 +11,77 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html",
     "variables": [
         {
+            "description": "A canned access control list (ACL) that grants predefined permissions to the                   bucket. For more information about canned ACLs, see Canned ACLs in the                      Amazon S3 documentation.",
             "name": "AccessControl",
             "name_underscore": "access_control",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique                   physical ID and uses that ID for the bucket name. For more information, see Name Type. The bucket                   name must contain only lowercase letters, numbers, periods (.), and dashes                   (-).",
             "name": "BucketName",
             "name_underscore": "bucket_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Rules that define cross-origin resource sharing of objects in this bucket.                         For more information, see Enabling                             Cross-Origin Resource Sharing in the                             Amazon Simple Storage Service Developer Guide.",
             "name": "CorsConfiguration",
             "name_underscore": "cors_configuration",
             "required": "No",
             "type": "Amazon S3 Cors Configuration"
         },
         {
+            "description": "Rules that define how Amazon S3 manages objects during their lifetime. For more                         information, see Object                             Lifecycle Management in the                             Amazon Simple Storage Service Developer Guide.",
             "name": "LifecycleConfiguration",
             "name_underscore": "lifecycle_configuration",
             "required": "No",
             "type": "Amazon S3 Lifecycle Configuration"
         },
         {
+            "description": "Settings that defines where logs are stored.",
             "name": "LoggingConfiguration",
             "name_underscore": "logging_configuration",
             "required": "No",
             "type": "Amazon S3 Logging Configuration"
         },
         {
+            "description": "Configuration that defines which Amazon SNS topic to send messages to and what                         events to report.",
             "name": "NotificationConfiguration",
             "name_underscore": "notification_configuration",
             "required": "No",
-            "type": "Amazon S3 Notification\n      Configuration"
+            "type": "Amazon S3 Notification       Configuration"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this Amazon S3 bucket.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags"
         },
         {
+            "description": "Enables multiple variants of all objects in this bucket. You might enable                         versioning to prevent objects from being deleted or overwritten by mistake                         or to archive objects so that you can retrieve previous versions of                         them.",
             "name": "VersioningConfiguration",
             "name_underscore": "versioning_configuration",
             "required": "No",
             "type": "Amazon S3 Versioning Configuration"
         },
         {
+            "description": "Information used to configure the bucket as a static website. For more information, see Hosting Websites on Amazon                   S3.",
             "name": "WebsiteConfiguration",
             "name_underscore": "website_configuration",
             "required": "No",
-            "type": "Website Configuration\n                  Type"
+            "type": "Website Configuration                   Type"
         },
         {
+            "description": "Returns the DNS name of the specified bucket.",
             "name": "DomainName",
             "name_underscore": "domain_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Amazon S3 website endpoint for the specified bucket.",
             "name": "WebsiteURL",
             "name_underscore": "website_url",
             "required": "No",

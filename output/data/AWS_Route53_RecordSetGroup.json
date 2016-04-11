@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "List of resource record sets to add.",
             "name": "RecordSets",
             "name_underscore": "record_sets",
             "required": "Yes",
@@ -16,18 +17,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup.html",
     "variables": [
         {
+            "description": "The ID of the hosted zone.",
             "name": "HostedZoneId",
             "name_underscore": "hosted_zone_id",
-            "required": "Conditional: You must specify either the\n                     HostedZoneName or HostedZoneId, but you cannot\n                  specify both.",
+            "required": "Conditional: You must specify either the                      HostedZoneName or HostedZoneId, but you cannot                   specify both.",
             "type": "String"
         },
         {
+            "description": "The name of the domain for the hosted zone where you want to add the record set.",
             "name": "HostedZoneName",
             "name_underscore": "hosted_zone_name",
-            "required": "Conditional. You must specify either the\n                     HostedZoneName or HostedZoneId, but you cannot\n                  specify both.",
+            "required": "Conditional. You must specify either the                      HostedZoneName or HostedZoneId, but you cannot                   specify both.",
             "type": "String"
         },
         {
+            "description": "Any comments you want to include about the hosted zone.",
             "name": "Comment",
             "name_underscore": "comment",
             "required": "No",

@@ -9,30 +9,35 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html",
     "variables": [
         {
+            "description": "Name of the host where requests are redirected.",
             "name": "HostName",
             "name_underscore": "host_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The HTTP redirect code to use on the response.",
             "name": "HttpRedirectCode",
             "name_underscore": "http_redirect_code",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The protocol to use in the redirect request.",
             "name": "Protocol",
             "name_underscore": "protocol",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The object key prefix to use in the redirect request. For example, to redirect                   requests for all pages with the prefix docs/ (objects in the                      docs/ folder) to the documents/ prefix, you can set                   the KeyPrefixEquals property in routing condition property to                      docs/, and set the ReplaceKeyPrefixWith property to documents/.",
             "name": "ReplaceKeyPrefixWith",
             "name_underscore": "replace_key_prefix_with",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The specific object key to use in the redirect request. For example, redirect                   request to error.html.",
             "name": "ReplaceKeyWith",
             "name_underscore": "replace_key_with",
             "required": "No",

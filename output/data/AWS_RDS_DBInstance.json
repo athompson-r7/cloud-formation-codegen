@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "A list of the DB security groups to assign to the Amazon RDS instance. The list can                   include both the name of existing DB security groups or references to AWS::RDS::DBSecurityGroup                   resources created in the template.",
             "name": "DBSecurityGroups",
             "name_underscore": "db_security_groups",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of the VPC security groups to assign to the Amazon RDS instance. The list can                   include both the physical IDs of existing VPC security groups or references to                      AWS::EC2::SecurityGroup resources created in the                   template.",
             "name": "VPCSecurityGroups",
             "name_underscore": "vpc_security_groups",
             "required": "No",
@@ -24,174 +26,203 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html",
     "variables": [
         {
+            "description": "The allocated storage size specified in gigabytes (GB).",
             "name": "AllocatedStorage",
             "name_underscore": "allocated_storage",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Indicates whether major version upgrades are allowed. Changing this parameter                   does not result in an outage, and the change is applied asynchronously as soon as                   possible.",
             "name": "AllowMajorVersionUpgrade",
             "name_underscore": "allow_major_version_upgrade",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Indicates that minor engine upgrades will be applied automatically to the DB                   instance during the maintenance window. The default value is                   true.",
             "name": "AutoMinorVersionUpgrade",
             "name_underscore": "auto_minor_version_upgrade",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The name of the Availability Zone where the DB instance is located. You cannot                   set the AvailabilityZone parameter if the                      MultiAZ parameter is set to true.",
             "name": "AvailabilityZone",
             "name_underscore": "availability_zone",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The number of days for which automatic DB snapshots are retained.",
             "name": "BackupRetentionPeriod",
             "name_underscore": "backup_retention_period",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "For supported engines, specifies the character set to associate with the                   database instance. For more information, see Appendix: Oracle                      Character Sets Supported in Amazon RDS in the                      Amazon Relational Database Service User Guide.",
             "name": "CharacterSetName",
             "name_underscore": "character_set_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the compute and memory capacity class of the DB instance.",
             "name": "DBInstanceClass",
             "name_underscore": "db_instance_class",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A name for the DB instance. If you don't specify a name, AWS CloudFormation generates a                   unique physical ID and uses that ID for the DB instance. For more information, see                      Name Type.",
             "name": "DBInstanceIdentifier",
             "name_underscore": "db_instance_identifier",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the initial database of this instance that was provided at create                   time, if one was specified. This same name is returned for the life of the DB                   instance.",
             "name": "DBName",
             "name_underscore": "db_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of an existing DB parameter group or a reference to an AWS::RDS::DBParameterGroup                   resource created in the template.",
             "name": "DBParameterGroupName",
             "name_underscore": "db_parameter_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The identifier for the DB snapshot to restore from.",
             "name": "DBSnapshotIdentifier",
             "name_underscore": "db_snapshot_identifier",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A DB subnet group to associate with the DB instance.",
             "name": "DBSubnetGroupName",
             "name_underscore": "db_subnet_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the database engine that the DB instance uses. This property is                   optional when you specify the DBSnapshotIdentifier property to create                   DB instances.",
             "name": "Engine",
             "name_underscore": "engine",
             "required": "Conditional",
             "type": "String"
         },
         {
+            "description": "The version number of the database engine to use.",
             "name": "EngineVersion",
             "name_underscore": "engine_version",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The number of I/O operations per second (IOPS) that the database provisions.                   The value must be equal to or greater than 1000.",
             "name": "Iops",
             "name_underscore": "iops",
-            "required": "Conditional. If you specify io1 for the\n                     StorageType property, you must specify this property.",
+            "required": "Conditional. If you specify io1 for the                      StorageType property, you must specify this property.",
             "type": "Number"
         },
         {
+            "description": "The Amazon Resource Name (ARN) of the AWS Key Management Service master key that is used to                   encrypt the database instance, such as                      arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef.                   If you enable the StorageEncrypted property but don't specify this                   property, the default master key is used.",
             "name": "KmsKeyId",
             "name_underscore": "kms_key_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The license model information for the DB instance.",
             "name": "LicenseModel",
             "name_underscore": "license_model",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The master user name for the database instance. This property is optional when                   you specify the DBSnapshotIdentifier property to create DB instances.",
             "name": "MasterUsername",
             "name_underscore": "master_username",
             "required": "Conditional",
             "type": "String"
         },
         {
+            "description": "The master password for the database instance. This property is optional when                   you specify the DBSnapshotIdentifier property to create DB                   instances.",
             "name": "MasterUserPassword",
             "name_underscore": "master_user_password",
             "required": "Conditional",
             "type": "String"
         },
         {
+            "description": "Specifies if the database instance is a multiple Availability Zone deployment.                   You cannot set the AvailabilityZone parameter if the                      MultiAZ parameter is set to true.",
             "name": "MultiAZ",
             "name_underscore": "multi_az",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "An option group that this database instance is associated with.",
             "name": "OptionGroupName",
             "name_underscore": "option_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The port for the instance.",
             "name": "Port",
             "name_underscore": "port",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The daily time range during which automated backups are created if automated                   backups are enabled, as determined by the BackupRetentionPeriod.",
             "name": "PreferredBackupWindow",
             "name_underscore": "preferred_backup_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The weekly time range (in UTC) during which system maintenance can                   occur.",
             "name": "PreferredMaintenanceWindow",
             "name_underscore": "preferred_maintenance_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Indicates whether the database instance is an Internet-facing instance. If you                   specify true, an instance is created with a publicly resolvable DNS                   name, which resolves to a public IP address. If you specify false, an                   internal instance is created with a DNS name that resolves to a private IP                   address.",
             "name": "PubliclyAccessible",
             "name_underscore": "publicly_accessible",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "If you want to create a read replica DB instance, specify the ID of the source                   database instance. Each database instance can have a certain number of read                   replicas. For more information, see Working with Read Replicas in the                      Amazon Relational Database Service Developer Guide.",
             "name": "SourceDBInstanceIdentifier",
             "name_underscore": "source_db_instance_identifier",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Indicates whether the database instance is encrypted.",
             "name": "StorageEncrypted",
             "name_underscore": "storage_encrypted",
-            "required": "Conditional. If you specify the KmsKeyId property, you\n                  must enable encryption.",
+            "required": "Conditional. If you specify the KmsKeyId property, you                   must enable encryption.",
             "type": "Boolean"
         },
         {
+            "description": "The storage type associated with this database instance.",
             "name": "StorageType",
             "name_underscore": "storage_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this database                   instance.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",

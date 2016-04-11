@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "The URLs of the queues to which you want to add the policy. You can use the Ref function to specify an AWS::SQS::Queue resource.",
             "name": "Queues",
             "name_underscore": "queues",
             "required": "Yes",
@@ -16,6 +17,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html",
     "variables": [
         {
+            "description": "A policy document containing permissions to add to the specified SQS queues.",
             "name": "PolicyDocument",
             "name_underscore": "policy_document",
             "required": "Yes",

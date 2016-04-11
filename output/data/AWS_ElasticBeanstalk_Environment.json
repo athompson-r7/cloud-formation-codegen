@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "Key-value pairs defining configuration options for this environment. These                   options override the values that are defined in the solution stack or the                   configuration template. If you remove any options during a stack update, the                   removed options revert to default values.",
             "name": "OptionSettings",
             "name_underscore": "option_settings",
             "required": "No",
@@ -18,60 +19,70 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html",
     "variables": [
         {
+            "description": "The name of the application that is associated with this environment.",
             "name": "ApplicationName",
             "name_underscore": "application_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A prefix for your Elastic Beanstalk environment URL.",
             "name": "CNAMEPrefix",
             "name_underscore": "cname_prefix",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A description that helps you identify this environment.",
             "name": "Description",
             "name_underscore": "description",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A name for the Elastic Beanstalk environment. If you don't specify a name, AWS CloudFormation generates                   a unique physical ID and uses that ID for the environment name. For more                   information, see Name Type.",
             "name": "EnvironmentName",
             "name_underscore": "environment_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of an Elastic Beanstalk solution stack that this configuration will use. For more                   information, see Supported                      Platforms in the AWS Elastic Beanstalk Developer Guide. You must                   specify either this parameter or an Elastic Beanstalk configuration template name.",
             "name": "SolutionStackName",
             "name_underscore": "solution_stack_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this environment.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags"
         },
         {
+            "description": "The name of the Elastic Beanstalk configuration template to use with the environment. You                   must specify either this parameter or a solution stack name.",
             "name": "TemplateName",
             "name_underscore": "template_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Specifies the tier to use in creating this environment. The environment tier                   that you choose determines whether Elastic Beanstalk provisions resources to support a web                   application that handles HTTP(S) requests or a web application that handles                   background-processing tasks.",
             "name": "Tier",
             "name_underscore": "tier",
             "required": "No",
-            "type": "Elastic Beanstalk Environment Tier Property\n      Type"
+            "type": "Elastic Beanstalk Environment Tier Property       Type"
         },
         {
+            "description": "The version to associate with the environment.",
             "name": "VersionLabel",
             "name_underscore": "version_label",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The URL to the load balancer for this environment.",
             "name": "EndpointURL",
             "name_underscore": "endpoint_url",
             "required": "No",

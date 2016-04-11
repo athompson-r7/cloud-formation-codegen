@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html",
     "variables": [
         {
+            "description": "The ID of the Amazon VPC that you want to associate with the hosted zone.",
             "name": "VPCId",
             "name_underscore": "vpc_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The region in which the Amazon VPC was created as specified in the                      VPCId property.",
             "name": "VPCRegion",
             "name_underscore": "vpc_region",
             "required": "Yes",

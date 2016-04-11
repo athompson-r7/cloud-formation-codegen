@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "One or more managed policy ARNs to attach to this role.",
             "name": "ManagedPolicyArns",
             "name_underscore": "managed_policy_arns",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The policies to associate with this role. Policies can also be specified                   externally. For sample templates that demonstrates both embedded and external                   policies, see Template                      Examples.",
             "name": "Policies",
             "name_underscore": "policies",
             "required": "No",
@@ -22,18 +24,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html",
     "variables": [
         {
+            "description": "The IAM assume role policy that is associated with this role.",
             "name": "AssumeRolePolicyDocument",
             "name_underscore": "assume_role_policy_document",
             "required": "Yes",
             "type": "A JSON policy document."
         },
         {
+            "description": "The path associated with this role. For information about IAM paths, see                      Friendly Names and Paths in                   IAM User Guide.",
             "name": "Path",
             "name_underscore": "path",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Returns the Amazon Resource Name (ARN) for the instance profile. For example:",
             "name": "Arn",
             "name_underscore": "arn",
             "required": "No",

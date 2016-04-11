@@ -9,6 +9,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes-host.html",
     "variables": [
         {
+            "description": "The data volume path on the host container instance.",
             "name": "SourcePath",
             "name_underscore": "source_path",
             "required": "No",

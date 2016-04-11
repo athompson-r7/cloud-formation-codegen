@@ -9,10 +9,11 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html",
     "variables": [
         {
+            "description": "Tags to associate with the file system.",
             "name": "FileSystemTags",
             "name_underscore": "file_system_tags",
             "required": "No",
-            "type": "Amazon Elastic File System FileSystem\n      FileSystemTags"
+            "type": "Amazon Elastic File System FileSystem       FileSystemTags"
         }
     ]
 }

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html",
     "variables": [
         {
+            "description": "The Amazon S3 bucket event about which to send notifications. For more information,                   see Supported Event Types in the                   Amazon Simple Storage Service Developer Guide.",
             "name": "Event",
             "name_underscore": "event",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The Amazon SNS topic to which Amazon S3 reports the specified events.",
             "name": "Topic",
             "name_underscore": "topic",
             "required": "Yes",

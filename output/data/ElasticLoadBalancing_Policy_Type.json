@@ -1,21 +1,24 @@
 {
     "list_variables": [
         {
+            "description": "A list of arbitrary attributes for this policy.",
             "name": "Attributes",
             "name_underscore": "attributes",
             "required": "No",
             "type": "List of JSON name-value pairs."
         },
         {
+            "description": "A list of instance ports for the policy. These are the ports associated with the back-end                   server.",
             "name": "InstancePorts",
             "name_underscore": "instance_ports",
             "required": "No",
             "type": "List of String"
         },
         {
+            "description": "A list of external load balancer ports for the policy.",
             "name": "LoadBalancerPorts",
             "name_underscore": "load_balancer_ports",
-            "required": "Only for some policies. For more information,\n                  see the Elastic Load Balancing\n                        Developer Guide.",
+            "required": "Only for some policies. For more information,                   see the Elastic Load Balancing                         Developer Guide.",
             "type": "List of String"
         }
     ],
@@ -28,12 +31,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html",
     "variables": [
         {
+            "description": "A name for this policy that is unique to the load balancer.",
             "name": "PolicyName",
             "name_underscore": "policy_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of the policy type for this policy. This must be one of the types reported by the Elastic Load Balancing                      DescribeLoadBalancerPolicyTypes action.",
             "name": "PolicyType",
             "name_underscore": "policy_type",
             "required": "Yes",

@@ -1,18 +1,21 @@
 {
     "list_variables": [
         {
+            "description": "HTTP methods that CloudFront processes and forwards to your Amazon S3 bucket or your                   custom origin. You can specify [\"HEAD\", \"GET\"], [\"GET\", \"HEAD\",                      \"OPTIONS\"], or [\"DELETE\", \"GET\", \"HEAD\", \"OPTIONS\", \"PATCH\",                      \"POST\", \"PUT\"]. If you don't specify a value, AWS CloudFormation specifies                      [\"HEAD\", \"GET\"].",
             "name": "AllowedMethods",
             "name_underscore": "allowed_methods",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "HTTP methods for which CloudFront caches responses. You can specify [\"HEAD\",                      \"GET\"] or [\"GET\", \"HEAD\", \"OPTIONS\"]. If you don't specify                   a value, AWS CloudFormation specifies [\"HEAD\", \"GET\"].",
             "name": "CachedMethods",
             "name_underscore": "cached_methods",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of AWS accounts that can create signed URLs in order to access private                   content.",
             "name": "TrustedSigners",
             "name_underscore": "trusted_signers",
             "required": "No",
@@ -28,30 +31,35 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-defaultcachebehavior.html",
     "variables": [
         {
+            "description": "Specifies how CloudFront handles query strings or cookies.",
             "name": "ForwardedValues",
             "name_underscore": "forwarded_values",
             "required": "Yes",
-            "type": "ForwardedValues\n                  type"
+            "type": "ForwardedValues                   type"
         },
         {
+            "description": "The minimum amount of time that you want objects to stay in the cache before                   CloudFront queries your origin to see whether the object has been updated.",
             "name": "MinTTL",
             "name_underscore": "min_ttl",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Indicates whether to use the origin that is associated with this cache behavior                   to distribute media files in the Microsoft Smooth Streaming format.",
             "name": "SmoothStreaming",
             "name_underscore": "smooth_streaming",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The value of ID for the origin that CloudFront routes requests to when the default                   cache behavior is applied to a request.",
             "name": "TargetOriginId",
             "name_underscore": "target_origin_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The protocol that users can use to access the files in the origin that you                   specified in the TargetOriginId property when the default cache                   behavior is applied to a request.",
             "name": "ViewerProtocolPolicy",
             "name_underscore": "viewer_protocol_policy",
             "required": "Yes",

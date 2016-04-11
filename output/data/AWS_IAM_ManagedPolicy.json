@@ -1,18 +1,21 @@
 {
     "list_variables": [
         {
+            "description": "The names of groups to attach to this policy.",
             "name": "Groups",
             "name_underscore": "groups",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The names of roles to attach to this policy.",
             "name": "Roles",
             "name_underscore": "roles",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The names of users to attach to this policy.",
             "name": "Users",
             "name_underscore": "users",
             "required": "No",
@@ -28,18 +31,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html",
     "variables": [
         {
+            "description": "A description of the policy. For example, you can describe the permissions that                   are defined in the policy.",
             "name": "Description",
             "name_underscore": "description",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The path for the policy. By default, the path is /. For more                   information, see IAM                      Identifiers in the IAM User Guide                   guide.",
             "name": "Path",
             "name_underscore": "path",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Policies that define the permissions for this managed policy.",
             "name": "PolicyDocument",
             "name_underscore": "policy_document",
             "required": "Yes",

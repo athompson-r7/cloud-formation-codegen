@@ -9,30 +9,35 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html",
     "variables": [
         {
+            "description": "Specifies the number of consecutive health probe successes required before moving the instance to                   the Healthy state.",
             "name": "HealthyThreshold",
             "name_underscore": "healthy_threshold",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies the approximate interval, in seconds, between health checks of an individual                   instance.",
             "name": "Interval",
             "name_underscore": "interval",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies the instance's protocol and port to check. The protocol can be TCP,                   HTTP, HTTPS, or SSL. The range of valid ports is 1 through 65535.",
             "name": "Target",
             "name_underscore": "target",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies the amount of time, in seconds, during which no response means a failed health probe.                   This value must be less than the value for Interval.",
             "name": "Timeout",
             "name_underscore": "timeout",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies the number of consecutive health probe failures required before moving the instance to                   the Unhealthy state.",
             "name": "UnhealthyThreshold",
             "name_underscore": "unhealthy_threshold",
             "required": "Yes",

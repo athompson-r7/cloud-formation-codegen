@@ -1,18 +1,21 @@
 {
     "list_variables": [
         {
+            "description": "Specifies how block devices are exposed to the instance. You can specify                   virtual devices and EBS volumes.",
             "name": "BlockDeviceMappings",
             "name_underscore": "block_device_mappings",
             "required": "No",
             "type": "A list of BlockDeviceMappings."
         },
         {
+            "description": "The IDs of one or more security groups for the VPC that you specified in the                      ClassicLinkVPCId property.",
             "name": "ClassicLinkVPCSecurityGroups",
             "name_underscore": "classic_link_vpc_security_groups",
-            "required": "Conditional. If you specified the ClassicLinkVPCId\n                  property, you must specify this property.",
+            "required": "Conditional. If you specified the ClassicLinkVPCId                   property, you must specify this property.",
             "type": "List of strings"
         },
         {
+            "description": "A list that contains the EC2 security groups to assign to the Amazon EC2                   instances in the Auto Scaling group. The list can contain the name of existing EC2                   security groups or references to AWS::EC2::SecurityGroup resources                   created in the template. If your instances are launched within VPC, specify Amazon VPC                   security group IDs.",
             "name": "SecurityGroups",
             "name_underscore": "security_groups",
             "required": "No",
@@ -28,84 +31,98 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html",
     "variables": [
         {
+            "description": "For Amazon EC2 instances in a VPC, indicates whether instances in the Auto Scaling group                   receive public IP addresses. If you specify true, each instance in                   the Auto Scaling receives a unique public IP address.",
             "name": "AssociatePublicIpAddress",
             "name_underscore": "associate_public_ip_address",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. You                   can specify this property only for EC2-Classic instances. For more information,                   see ClassicLink in the                      Amazon Elastic Compute Cloud User                   Guide.",
             "name": "ClassicLinkVPCId",
             "name_underscore": "classic_link_vpc_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Specifies whether the launch configuration is optimized for EBS I/O. This                   optimization provides dedicated throughput to Amazon EBS and an optimized                   configuration stack to provide optimal EBS I/O performance.",
             "name": "EbsOptimized",
             "name_underscore": "ebs_optimized",
             "required": "No If this property is not specified, \"false\" is used.",
             "type": "Boolean"
         },
         {
+            "description": "Provides the name or the Amazon Resource Name (ARN) of the instance profile                   associated with the IAM role for the instance. The instance profile contains the                   IAM role.",
             "name": "IamInstanceProfile",
             "name_underscore": "iam_instance_profile",
             "required": "No",
-            "type": "String (1\u20131600 chars)"
+            "type": "String (1-1600 chars)"
         },
         {
+            "description": "Provides the unique ID of the Amazon Machine Image (AMI) that was assigned                   during registration.",
             "name": "ImageId",
             "name_underscore": "image_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the Amazon EC2 instance you want to use to create the launch                   configuration. Use this property if you want the launch configuration to use                   settings from an existing Amazon EC2 instance.",
             "name": "InstanceId",
             "name_underscore": "instance_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Indicates whether detailed instance monitoring is enabled for the Auto Scaling group.                   By default, this property is set to true (enabled).",
             "name": "InstanceMonitoring",
             "name_underscore": "instance_monitoring",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Specifies the instance type of the EC2 instance.",
             "name": "InstanceType",
             "name_underscore": "instance_type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Provides the ID of the kernel associated with the EC2 AMI.",
             "name": "KernelId",
             "name_underscore": "kernel_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Provides the name of the EC2 key pair.",
             "name": "KeyName",
             "name_underscore": "key_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The tenancy of the instance. An instance with a tenancy of                      dedicated runs on single-tenant hardware and can only be launched                   in a VPC. You must set the value of this parameter to dedicated if                   want to launch dedicated instances in a shared tenancy VPC (a VPC with the                   instance placement tenancy attribute set to default). For more information, see                      CreateLaunchConfiguration in the                   Auto Scaling API Reference.",
             "name": "PlacementTenancy",
             "name_underscore": "placement_tenancy",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The ID of the RAM disk to select. Some kernels require additional drivers at                   launch. Check the kernel requirements for information about whether you need to                   specify a RAM disk. To find kernel requirements, refer to the AWS Resource Center                   and search for the kernel ID.",
             "name": "RamDiskId",
             "name_underscore": "ram_disk_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The spot price for this autoscaling group. If a spot price is set, then the                   autoscaling group will launch when the current spot price is less than the amount                   specified in the template.",
             "name": "SpotPrice",
             "name_underscore": "spot_price",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The user data available to the launched EC2 instances.",
             "name": "UserData",
             "name_underscore": "user_data",
             "required": "No",

@@ -5,6 +5,7 @@ module Convection
     class Template
       class Resource
         ##
+        # AWS::CloudFormation::Init
         # AWS_CloudFormation_Init
         ##
         class CloudFormationInit < Resource
@@ -13,21 +14,21 @@ module Convection
 
           def initialize(*args)
             super
-            type 'AWS_CloudFormation_Init'
-
+            type 'CloudFormationInit'
           end
-
         end
       end
     end
   end
 
   module DSL
-    ## Add DSL method to template namespace
     module Template
+      # DESCRIPTION -- WIP
+      # The following resources are available:
+      # @see http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html 
+      # @see {Model::Template::Resource::CloudFormationInit}
       def cloudformation_init(name, &block)
         r = Model::Template::Resource::CloudFormationInit.new(name, self)
-
         r.instance_exec(&block) if block
         resources[name] = r
       end

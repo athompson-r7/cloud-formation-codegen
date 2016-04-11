@@ -9,6 +9,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html",
     "variables": [
         {
+            "description": "The number of shards that the stream uses. For greater provisioned throughput,                   increase the number of shards.",
             "name": "ShardCount",
             "name_underscore": "shard_count",
             "required": "Yes",

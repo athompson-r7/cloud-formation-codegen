@@ -9,18 +9,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-customorigin.html",
     "variables": [
         {
+            "description": "The HTTP port the custom origin listens on.",
             "name": "HTTPPort",
             "name_underscore": "http_port",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The HTTPS port the custom origin listens on.",
             "name": "HTTPSPort",
             "name_underscore": "https_port",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The origin protocol policy to apply to your origin.",
             "name": "OriginProtocolPolicy",
             "name_underscore": "origin_protocol_policy",
             "required": "Yes",

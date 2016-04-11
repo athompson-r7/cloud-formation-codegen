@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-chefconfiguration.html",
     "variables": [
         {
+            "description": "The Berkshelf version.",
             "name": "BerkshelfVersion",
             "name_underscore": "berkshelf_version",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Whether to enable Berkshelf.",
             "name": "ManageBerkshelf",
             "name_underscore": "manage_berkshelf",
             "required": "No",

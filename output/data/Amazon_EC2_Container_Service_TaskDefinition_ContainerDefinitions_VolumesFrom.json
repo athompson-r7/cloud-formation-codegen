@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-volumesfrom.html",
     "variables": [
         {
+            "description": "The name of the container that has the volumes to mount.",
             "name": "SourceContainer",
             "name_underscore": "source_container",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Indicates whether the container can write to the volume. If you specify                      true, the container has read-only access to the volume.                   If you specify false, the container can write to the                   volume. By default, the value is false.",
             "name": "ReadOnly",
             "name_underscore": "read_only",
             "required": "No",

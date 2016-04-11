@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-filesystemtags.html",
     "variables": [
         {
+            "description": "The key name of the tag. You can specify a value that is from 1 to 128 Unicode                   characters in length, but you cannot use the prefix aws:.",
             "name": "Key",
             "name_underscore": "key",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The value of the tag key. You can specify a value that is from 0 to 128 Unicode                   characters in length.",
             "name": "Value",
             "name_underscore": "value",
             "required": "No",

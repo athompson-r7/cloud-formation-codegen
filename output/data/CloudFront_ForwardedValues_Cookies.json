@@ -1,9 +1,10 @@
 {
     "list_variables": [
         {
+            "description": "The names of cookies to forward to the origin for the cache behavior.",
             "name": "WhitelistedNames",
             "name_underscore": "whitelisted_names",
-            "required": "Conditional. Required if you specified whitelist for\n                  the Forward property.",
+            "required": "Conditional. Required if you specified whitelist for                   the Forward property.",
             "type": "List of strings"
         }
     ],
@@ -16,6 +17,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-forwardedvalues-cookies.html",
     "variables": [
         {
+            "description": "The cookies to forward to the origin of the cache behavior. You can specify                      none, all, or whitelist.",
             "name": "Forward",
             "name_underscore": "forward",
             "required": "Yes",

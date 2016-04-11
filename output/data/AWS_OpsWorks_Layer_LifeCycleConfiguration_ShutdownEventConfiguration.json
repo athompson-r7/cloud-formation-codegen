@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.html",
     "variables": [
         {
+            "description": "Indicates whether to wait for connections to drain from the Elastic Load Balancing load                   balancers.",
             "name": "DelayUntilElbConnectionsDrained",
             "name_underscore": "delay_until_elb_connections_drained",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The time, in seconds, that AWS OpsWorks waits after a shutdown event has been                   triggered before shutting down an instance.",
             "name": "ExecutionTimeout",
             "name_underscore": "execution_timeout",
             "required": "No",

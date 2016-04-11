@@ -9,36 +9,42 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html",
     "variables": [
         {
+            "description": "A list of AttributeName and AttributeType objects             that describe the key schema for the table and indexes.",
             "name": "AttributeDefinitions",
             "name_underscore": "attribute_definitions",
             "required": "Yes",
             "type": "DynamoDB Attribute Definitions"
         },
         {
+            "description": "Global secondary indexes to be created on the table. You can create up to 5 global             secondary indexes.",
             "name": "GlobalSecondaryIndexes",
             "name_underscore": "global_secondary_indexes",
             "required": "No",
             "type": "DynamoDB Global Secondary Indexes"
         },
         {
+            "description": "Specifies the attributes that make up the primary key for the table. The             attributes in the KeySchema property must also be defined in the               AttributeDefinitions property.",
             "name": "KeySchema",
             "name_underscore": "key_schema",
             "required": "Yes",
             "type": "DynamoDB Key Schema"
         },
         {
+            "description": "Local secondary indexes to be created on the table. You can create up to 5 local             secondary indexes. Each index is scoped to a given hash key value. The size of each hash             key can be up to 10 gigabytes.",
             "name": "LocalSecondaryIndexes",
             "name_underscore": "local_secondary_indexes",
             "required": "No",
             "type": "DynamoDB Local Secondary Indexes"
         },
         {
+            "description": "Throughput for the specified table, consisting of values for ReadCapacityUnits             and WriteCapacityUnits. For more information about the contents of a Provisioned             Throughput structure, see DynamoDB Provisioned       Throughput.",
             "name": "ProvisionedThroughput",
             "name_underscore": "provisioned_throughput",
             "required": "Yes",
-            "type": "DynamoDB Provisioned\n      Throughput"
+            "type": "DynamoDB Provisioned       Throughput"
         },
         {
+            "description": "A name for the table. If you don't specify a name, AWS CloudFormation generates a unique             physical ID and uses that ID for the table name. For more information, see Name Type.",
             "name": "TableName",
             "name_underscore": "table_name",
             "required": "No",

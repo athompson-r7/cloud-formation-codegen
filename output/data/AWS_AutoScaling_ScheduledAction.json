@@ -9,42 +9,49 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html",
     "variables": [
         {
+            "description": "The name or ARN of the Auto Scaling group.",
             "name": "AutoScalingGroupName",
             "name_underscore": "auto_scaling_group_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The number of Amazon EC2 instances that should be running in the Auto Scaling group.",
             "name": "DesiredCapacity",
             "name_underscore": "desired_capacity",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The time in UTC for this schedule to end. For example,                      2010-06-01T00:00:00Z.",
             "name": "EndTime",
             "name_underscore": "end_time",
             "required": "No",
             "type": "Time stamp"
         },
         {
+            "description": "The maximum number of Amazon EC2 instances in the Auto Scaling group.",
             "name": "MaxSize",
             "name_underscore": "max_size",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The minimum number of Amazon EC2 instances in the Auto Scaling group.",
             "name": "MinSize",
             "name_underscore": "min_size",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The time in UTC when recurring future actions will start. You specify the start                   time by following the Unix cron syntax format. For more information about cron                   syntax, go to http://en.wikipedia.org/wiki/Cron.",
             "name": "Recurrence",
             "name_underscore": "recurrence",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The time in UTC for this schedule to start. For example,                      2010-06-01T00:00:00Z.",
             "name": "StartTime",
             "name_underscore": "start_time",
             "required": "No",

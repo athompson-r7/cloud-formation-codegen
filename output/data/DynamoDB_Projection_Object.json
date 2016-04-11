@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "The non-key attribute names that are projected into the index.",
             "name": "NonKeyAttributes",
             "name_underscore": "non_key_attributes",
             "required": "No",
@@ -16,24 +17,28 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html",
     "variables": [
         {
+            "description": "The set of attributes that are projected into the index:",
             "name": "ProjectionType",
             "name_underscore": "projection_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Only the index and primary keys are projected into the                               index.",
             "name": "KEYS_ONLY",
             "name_underscore": "keys_only",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Only the specified table attributes are projected into the index.                               The list of projected attributes are in                               NonKeyAttributes.",
             "name": "INCLUDE",
             "name_underscore": "include",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "All of the table attributes are projected into the index.",
             "name": "ALL",
             "name_underscore": "all",
             "required": "No",

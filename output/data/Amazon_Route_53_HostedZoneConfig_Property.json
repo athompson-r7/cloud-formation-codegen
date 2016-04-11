@@ -9,6 +9,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html",
     "variables": [
         {
+            "description": "Any comments that you want to include about the hosted zone.",
             "name": "Comment",
             "name_underscore": "comment",
             "required": "No",

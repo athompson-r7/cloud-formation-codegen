@@ -1,18 +1,21 @@
 {
     "list_variables": [
         {
+            "description": "A name of a group to which you want to add the user.",
             "name": "Groups",
             "name_underscore": "groups",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "One or more managed policy ARNs to attach to this user.",
             "name": "ManagedPolicyArns",
             "name_underscore": "managed_policy_arns",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The policies to associate with this user. For information about policies, see                      Overview of Policies in [Using IAM].",
             "name": "Policies",
             "name_underscore": "policies",
             "required": "No",
@@ -28,18 +31,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html",
     "variables": [
         {
+            "description": "Creates a login profile so that the user can access the AWS Management Console.",
             "name": "LoginProfile",
             "name_underscore": "login_profile",
             "required": "No",
             "type": "IAM User LoginProfile"
         },
         {
+            "description": "The path for the user name. For more information about paths, see Identifiers                   for IAM Entities in Using AWS Identity and Access Management.",
             "name": "Path",
             "name_underscore": "path",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Returns the Amazon Resource Name (ARN) for the specified AWS::IAM::User resource. For example:                      arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D.",
             "name": "Arn",
             "name_underscore": "arn",
             "required": "No",

@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "The list of metrics to collect. If you don't specify any metrics, all metrics                   are enabled.",
             "name": "Metrics",
             "name_underscore": "metrics",
             "required": "No",
@@ -16,6 +17,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-metricscollection.html",
     "variables": [
         {
+            "description": "The frequency at which Auto Scaling sends aggregated data to CloudWatch. For example, you can                   specify 1Minute to send aggregated data to CloudWatch every minute.",
             "name": "Granularity",
             "name_underscore": "granularity",
             "required": "Yes",

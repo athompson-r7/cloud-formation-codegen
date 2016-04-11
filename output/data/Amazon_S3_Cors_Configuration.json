@@ -9,6 +9,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors.html",
     "variables": [
         {
+            "description": "A set of origins and methods that you allow.",
             "name": "CorsRules",
             "name_underscore": "cors_rules",
             "required": "Yes",

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution.html",
     "variables": [
         {
+            "description": "The distribution's configuration information.",
             "name": "DistributionConfig",
             "name_underscore": "distribution_config",
             "required": "Yes",
             "type": "DistributionConfig type"
         },
         {
+            "description": "Returns: The domain name of the resource. For example:                      d2fadu0nynjpfn.cloudfront.net.",
             "name": "DomainName",
             "name_underscore": "domain_name",
             "required": "No",

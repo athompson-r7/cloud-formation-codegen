@@ -11,6 +11,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internet-gateway.html",
     "variables": [
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",

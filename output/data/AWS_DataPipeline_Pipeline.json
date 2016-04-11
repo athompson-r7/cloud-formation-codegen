@@ -1,10 +1,11 @@
 {
     "list_variables": [
         {
+            "description": "A list of pipeline objects that make up the pipeline. For more information about             pipeline objects and a description of each object, see Pipeline Object Reference in the               AWS Data Pipeline Developer Guide.",
             "name": "PipelineObjects",
             "name_underscore": "pipeline_objects",
             "required": "Yes",
-            "type": "A list of AWS Data Pipeline\n      PipelineObjects"
+            "type": "A list of AWS Data Pipeline       PipelineObjects"
         }
     ],
     "mixins": [],
@@ -16,40 +17,46 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html",
     "variables": [
         {
+            "description": "Indicates whether to validate and start the pipeline or stop an active pipeline. By             default, the value is set to true.",
             "name": "Activate",
             "name_underscore": "activate",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "A description for the pipeline.",
             "name": "Description",
             "name_underscore": "description",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A name for the pipeline. Because AWS CloudFormation assigns each new pipeline a unique                         identifier, you can use the same name for multiple pipelines that are                         associated with your AWS account.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Defines the variables that are in the pipeline definition. For more                         information, see Creating                             a Pipeline Using Parameterized Templates in the                             AWS Data Pipeline Developer Guide.",
             "name": "ParameterObjects",
             "name_underscore": "parameter_objects",
             "required": "No",
-            "type": "AWS Data Pipeline Pipeline\n      ParameterObjects"
+            "type": "AWS Data Pipeline Pipeline       ParameterObjects"
         },
         {
+            "description": "Defines the values for the parameters that are defined in the               ParameterObjects property. For more information, see Creating a Pipeline Using Parameterized               Templates in the AWS Data Pipeline Developer Guide.",
             "name": "ParameterValues",
             "name_underscore": "parameter_values",
             "required": "No",
-            "type": "AWS Data Pipeline Pipeline\n      ParameterValues"
+            "type": "AWS Data Pipeline Pipeline       ParameterValues"
         },
         {
+            "description": "A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you                         can use to control permissions. For more information, see Controlling Access to                             Pipelines and Resources in the                             AWS Data Pipeline Developer Guide.",
             "name": "PipelineTags",
             "name_underscore": "pipeline_tags",
             "required": "No",
-            "type": "AWS Data Pipeline Pipeline\n      PipelineTags"
+            "type": "AWS Data Pipeline Pipeline       PipelineTags"
         }
     ]
 }

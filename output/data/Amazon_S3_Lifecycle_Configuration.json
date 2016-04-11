@@ -9,6 +9,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig.html",
     "variables": [
         {
+            "description": "A lifecycle rule for individual objects in an S3 bucket.",
             "name": "Rules",
             "name_underscore": "rules",
             "required": "Yes",

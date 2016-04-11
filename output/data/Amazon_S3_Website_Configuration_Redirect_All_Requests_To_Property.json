@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html",
     "variables": [
         {
+            "description": "Name of the host where requests are redirected.",
             "name": "HostName",
             "name_underscore": "host_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Protocol to use (http or https) when redirecting                   requests. The default is the protocol that is used in the original request.",
             "name": "Protocol",
             "name_underscore": "protocol",
             "required": "No",

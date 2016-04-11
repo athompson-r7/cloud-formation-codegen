@@ -1,46 +1,53 @@
 {
     "list_variables": [
         {
+            "description": "The CMD value to pass to the container. For more information                         about the Docker CMD parameter, see https://docs.docker.com/reference/builder/#cmd.",
             "name": "Command",
             "name_underscore": "command",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The ENTRYPOINT value to pass to the container. For more                         information about the Docker ENTRYPOINT parameter, see https://docs.docker.com/reference/builder/#entrypoint.",
             "name": "EntryPoint",
             "name_underscore": "entry_point",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The environment variables to pass to the container.",
             "name": "Environment",
             "name_underscore": "environment",
             "required": "No",
-            "type": "List of Amazon EC2 Container Service\n      TaskDefinition ContainerDefinitions Environment"
+            "type": "List of Amazon EC2 Container Service       TaskDefinition ContainerDefinitions Environment"
         },
         {
+            "description": "The name of another container to connect to. With links, containers can                         communicate with each other without using port mappings.",
             "name": "Links",
             "name_underscore": "links",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The mount points for data volumes in the container.",
             "name": "MountPoints",
             "name_underscore": "mount_points",
             "required": "No",
-            "type": "List of Amazon EC2 Container Service\n      TaskDefinition ContainerDefinitions MountPoints"
+            "type": "List of Amazon EC2 Container Service       TaskDefinition ContainerDefinitions MountPoints"
         },
         {
+            "description": "A mapping of the container port to a host port. Port mappings enable                         containers to access ports on the host container instance to send or receive                         traffic.",
             "name": "PortMappings",
             "name_underscore": "port_mappings",
             "required": "No",
-            "type": "List of Amazon EC2 Container Service\n      TaskDefinition ContainerDefinitions PortMappings"
+            "type": "List of Amazon EC2 Container Service       TaskDefinition ContainerDefinitions PortMappings"
         },
         {
+            "description": "Data volumes to mount from another container.",
             "name": "VolumesFrom",
             "name_underscore": "volumes_from",
             "required": "No",
-            "type": "List of Amazon EC2 Container Service\n      TaskDefinition ContainerDefinitions VolumesFrom"
+            "type": "List of Amazon EC2 Container Service       TaskDefinition ContainerDefinitions VolumesFrom"
         }
     ],
     "mixins": [],
@@ -52,30 +59,35 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions.html",
     "variables": [
         {
+            "description": "The minimum number of CPU units to reserve for the container. Containers                         share unallocated CPU units with other containers on the instance by using                         the same ratio as their allocated CPU units.",
             "name": "Cpu",
             "name_underscore": "cpu",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "Indicates whether the task stops if this container fails. If you specify                             true and the container fails, all other                         containers in the task stop. If you specify false and                         the container fails, none of the other containers in the task are affected.                         This value is true by default.",
             "name": "Essential",
             "name_underscore": "essential",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The image to use for a container, which is passed directly to the Docker                         daemon. You can use images in the Docker Hub registry or specify other                         repositories                             (repository-url/image:tag).",
             "name": "Image",
             "name_underscore": "image",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The number of MiB of memory to reserve for the container. If your                         container attempts to exceed the allocated memory, the container is                         killed.",
             "name": "Memory",
             "name_underscore": "memory",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "A name for the container.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",

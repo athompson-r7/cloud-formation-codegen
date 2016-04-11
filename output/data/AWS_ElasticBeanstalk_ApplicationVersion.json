@@ -9,18 +9,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html",
     "variables": [
         {
+            "description": "Name of the Elastic Beanstalk application that is associated with this application                   version.",
             "name": "ApplicationName",
             "name_underscore": "application_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A description of this application version.",
             "name": "Description",
             "name_underscore": "description",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The location of the source bundle for this version.",
             "name": "SourceBundle",
             "name_underscore": "source_bundle",
             "required": "Yes",

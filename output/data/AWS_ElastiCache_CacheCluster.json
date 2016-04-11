@@ -1,27 +1,31 @@
 {
     "list_variables": [
         {
+            "description": "A list of cache security group names that are associated with this cache                   cluster. If your cache cluster is in a VPC, specify the                      VpcSecurityGroupIds property instead.",
             "name": "CacheSecurityGroupNames",
             "name_underscore": "cache_security_group_names",
-            "required": "Conditional: If your cache cluster isn't in a VPC, you must specify\n                  this property.",
+            "required": "Conditional: If your cache cluster isn't in a VPC, you must specify                   this property.",
             "type": "List of strings"
         },
         {
+            "description": "For Memcached cache clusters, the list of Availability Zones in which cache                   nodes are created. The number of Availability Zones listed must equal the number                   of cache nodes. For example, if you want to create three nodes in two different                   Availability Zones, you can specify [\"us-east-1a\", \"us-east-1a\",                      \"us-east-1b\"], which would create two nodes in us-east-1a and one node                   in us-east-1b.",
             "name": "PreferredAvailabilityZones",
             "name_underscore": "preferred_availability_zones",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The ARN of the snapshot file that you want to use to seed a new Redis cache                   cluster. If you manage a Redis instance outside of Amazon ElastiCache, you can create a new                   cache cluster in ElastiCache by using a snapshot file that is stored in an Amazon S3                   bucket.",
             "name": "SnapshotArns",
             "name_underscore": "snapshot_arns",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of VPC security group IDs. If your cache cluster isn't in a VPC, specify                   the CacheSecurityGroupNames property instead.",
             "name": " VpcSecurityGroupIds ",
             "name_underscore": " vpc_security_group_ids ",
-            "required": "Conditional: If your cache cluster is in a VPC, you must specify\n                  this property.",
+            "required": "Conditional: If your cache cluster is in a VPC, you must specify                   this property.",
             "type": "List of strings"
         }
     ],
@@ -34,108 +38,126 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html",
     "variables": [
         {
+            "description": "Indicates that minor engine upgrades will be applied automatically to the cache                   cluster during the maintenance window.",
             "name": "AutoMinorVersionUpgrade",
             "name_underscore": "auto_minor_version_upgrade",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "For Memcached cache clusters, indicates whether the nodes are created in a                   single Availability Zone or across multiple Availability Zones in the cluster's                   region. For valid values, see CreateCacheCluster in                   the Amazon ElastiCache API Reference.",
             "name": "AZMode",
             "name_underscore": "az_mode",
-            "required": "Conditional. If you specify multiple Availability Zones in the\n                     PreferredAvailabilityZones property, you must specify cross\n                  Availability Zones for this property.",
+            "required": "Conditional. If you specify multiple Availability Zones in the                      PreferredAvailabilityZones property, you must specify cross                   Availability Zones for this property.",
             "type": "String"
         },
         {
+            "description": "The compute and memory capacity of nodes in a cache cluster.",
             "name": "CacheNodeType",
             "name_underscore": "cache_node_type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of the cache parameter group that is associated with this cache                   cluster.",
             "name": "CacheParameterGroupName",
             "name_underscore": "cache_parameter_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The cache subnet group that you associate with a cache cluster.",
             "name": "CacheSubnetGroupName",
             "name_underscore": "cache_subnet_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A name for the cache cluster. If you don't specify a name, AWS CloudFormation generates a                   unique physical ID and uses that ID for the cache cluster. For more information,                   see Name Type.",
             "name": "ClusterName",
             "name_underscore": "cluster_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the cache engine to be used for this cache cluster, such as                      memcached or redis.",
             "name": "Engine",
             "name_underscore": "engine",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The version of the cache engine to be used for this cluster.",
             "name": "EngineVersion",
             "name_underscore": "engine_version",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS)                   topic to which notifications will be sent.",
             "name": "NotificationTopicArn",
             "name_underscore": "notification_topic_arn",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The number of cache nodes that the cache cluster should have.",
             "name": "NumCacheNodes",
             "name_underscore": "num_cache_nodes",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The port number on which each of the cache nodes will accept                   connections.",
             "name": "Port",
             "name_underscore": "port",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The Amazon EC2 Availability Zone in which the cache cluster is created.",
             "name": "PreferredAvailabilityZone",
             "name_underscore": "preferred_availability_zone",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The weekly time range (in UTC) during which system maintenance can                   occur.",
             "name": "PreferredMaintenanceWindow",
             "name_underscore": "preferred_maintenance_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of a snapshot from which to restore data into a new Redis cache                   cluster.",
             "name": "SnapshotName",
             "name_underscore": "snapshot_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "For Redis cache clusters, the number of days for which ElastiCache retains automatic                   snapshots before deleting them. For example, if you set the value to                      5, a snapshot that was taken today will be retained for 5 days                   before being deleted.",
             "name": "SnapshotRetentionLimit",
             "name_underscore": "snapshot_retention_limit",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "For Redis cache clusters, the daily time range (in UTC) during which ElastiCache will                   begin taking a daily snapshot of your node group. For example, you can specify                      05:00-09:00.",
             "name": "SnapshotWindow",
             "name_underscore": "snapshot_window",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The DNS address of the configuration endpoint for the Memcached cache                      cluster.",
             "name": "ConfigurationEndpoint.Address",
             "name_underscore": "configuration_endpoint.address",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The port number of the configuration endpoint for the Memcached cache                      cluster.",
             "name": "ConfigurationEndpoint.Port",
             "name_underscore": "configuration_endpoint.port",
             "required": "No",

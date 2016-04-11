@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "Required: Yes",
             "name": "Users",
             "name_underscore": "users",
             "required": "Yes",
@@ -16,6 +17,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html",
     "variables": [
         {
+            "description": "The name of group to add users to.",
             "name": "GroupName",
             "name_underscore": "group_name",
             "required": "Yes",

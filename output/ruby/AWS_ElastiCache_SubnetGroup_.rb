@@ -5,35 +5,48 @@ module Convection
     class Template
       class Resource
         ##
+        # AWS::ElastiCache::SubnetGroup 
         # AWS_ElastiCache_SubnetGroup_
         ##
         class ElastiCacheSubnetGroup < Resource
 
 
+          # @!scope class
+          # @attribute [w]
+          # Description
+          # The description for the cache subnet group. -- WIP 
+          # @note Required: Yes
+          # @see  
           property :description, 'Description'
+
+          # @!scope class
+          # @attribute [w]
+          # SubnetIds
+          # The Amazon EC2 subnet IDs for the cache subnet group. -- WIP
+          # @note Required: Yes
+          # @see 
+          property :subnet_ids, 'SubnetIds', :array
+
 
           def initialize(*args)
             super
-            type 'AWS_ElastiCache_SubnetGroup_'
-
-            @variables['SubnetIds'] = []
+            type 'ElastiCacheSubnetGroup'
           end
-
-          def subnet_ids(value)
-            @variables['SubnetIds'] << value
-          end
-          
         end
       end
     end
   end
 
   module DSL
-    ## Add DSL method to template namespace
     module Template
+      # DESCRIPTION -- WIP
+      # The following resources are available:
+      # {Model::Template::Resource::ElastiCacheSubnetGroup#description description}
+      # {Model::Template::Resource::ElastiCacheSubnetGroup#subnet_ids subnet_ids}
+      # @see http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html 
+      # @see {Model::Template::Resource::ElastiCacheSubnetGroup}
       def elasticache_subnetgroup_(name, &block)
         r = Model::Template::Resource::ElastiCacheSubnetGroup.new(name, self)
-
         r.instance_exec(&block) if block
         resources[name] = r
       end

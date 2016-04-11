@@ -29,7 +29,7 @@
         {
             "name": "Port",
             "name_underscore": "port",
-            "required": "Conditional. Required when you specify TCP for the\n                     Type property.",
+            "required": "Conditional. Required when you specify TCP for the                      Type property.",
             "type": "Integer"
         },
         {

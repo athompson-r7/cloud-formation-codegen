@@ -1,15 +1,17 @@
 {
     "list_variables": [
         {
+            "description": "A comma-delimited list of Amazon S3 buckets to be associated with the S3                   authentication credentials.",
             "name": "buckets",
             "name_underscore": "buckets",
-            "required": "Conditional Can be specified only if the type\n                  property is set to \"S3\".",
+            "required": "Conditional Can be specified only if the type                   property is set to \"S3\".",
             "type": "List of strings"
         },
         {
+            "description": "A comma-delimited list of URIs to be associated with the basic authentication                   credentials. The authorization applies to the specified URIs and any more specific                   URI. For example, if you specify http://www.example.com, the                   authorization will also apply to http://www.example.com/test.",
             "name": "uris",
             "name_underscore": "uris",
-            "required": "Conditional Can be specified only if the type\n                  property is set to \"basic\".",
+            "required": "Conditional Can be specified only if the type                   property is set to \"basic\".",
             "type": "List of strings"
         }
     ],
@@ -22,39 +24,45 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-authentication.html",
     "variables": [
         {
+            "description": "Specifies the access key ID for S3 authentication.",
             "name": "accessKeyId",
             "name_underscore": "access_key_id",
-            "required": "Conditional Can be specified only if the type\n                  property is set to \"S3\".",
+            "required": "Conditional Can be specified only if the type                   property is set to \"S3\".",
             "type": "String"
         },
         {
+            "description": "Specifies the password for basic authentication.",
             "name": "password",
             "name_underscore": "password",
-            "required": "Conditional Can be specified only if the type property is set to\n                     \"basic\".",
+            "required": "Conditional Can be specified only if the type property is set to                      \"basic\".",
             "type": "String"
         },
         {
+            "description": "Specifies the secret key for S3 authentication.",
             "name": "secretKey",
             "name_underscore": "secret_key",
-            "required": "Conditional Can be specified only if the type\n                  property is set to \"S3\".",
+            "required": "Conditional Can be specified only if the type                   property is set to \"S3\".",
             "type": "String"
         },
         {
+            "description": "Specifies whether the authentication scheme uses a user name and password                   (\"basic\") or an access key ID and secret key (\"S3\").",
             "name": "type",
             "name_underscore": "type",
             "required": "Yes",
             "type": "String Valid values are \"basic\" or \"S3\""
         },
         {
+            "description": "Specifies the user name for basic authentication.",
             "name": "username",
             "name_underscore": "username",
-            "required": "Conditional Can be specified only if the type property is set to\n                     \"basic\".",
+            "required": "Conditional Can be specified only if the type property is set to                      \"basic\".",
             "type": "String"
         },
         {
+            "description": "Describes the role for role-based authentication.",
             "name": "roleName",
             "name_underscore": "role_name",
-            "required": "Conditional Can be specified only if the type\n                  property is set to \"S3\".",
+            "required": "Conditional Can be specified only if the type                   property is set to \"S3\".",
             "type": "String."
         }
     ]

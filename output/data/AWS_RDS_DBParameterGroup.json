@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "The tags that you want to attach to the RDS parameter group.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
@@ -18,22 +19,25 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html",
     "variables": [
         {
+            "description": "A friendly description of the RDS parameter group. For example, \"My Parameter Group\".",
             "name": "Description",
             "name_underscore": "description",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The database family of this RDS parameter group. For example, \"MySQL5.1\".",
             "name": "Family",
             "name_underscore": "family",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The parameters to set for this RDS parameter group.",
             "name": "Parameters",
             "name_underscore": "parameters",
             "required": "No",
-            "type": "DBParameters, a JSON object consisting of key/value pairs of Strings.\n                  For example:"
+            "type": "DBParameters, a JSON object consisting of key/value pairs of Strings.                   For example:"
         }
     ]
 }

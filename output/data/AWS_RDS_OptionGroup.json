@@ -11,30 +11,35 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html",
     "variables": [
         {
+            "description": "The name of the database engine that this option group is associated                   with.",
             "name": "EngineName",
             "name_underscore": "engine_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The major version number of the database engine that this option group is                   associated with.",
             "name": "MajorEngineVersion",
             "name_underscore": "major_engine_version",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A description of the option group.",
             "name": "OptionGroupDescription",
             "name_underscore": "option_group_description",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The configurations for this option group.",
             "name": "OptionConfigurations",
             "name_underscore": "option_configurations",
             "required": "Yes",
-            "type": "Amazon RDS OptionGroup\n    OptionConfigurations"
+            "type": "Amazon RDS OptionGroup     OptionConfigurations"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this option group.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",

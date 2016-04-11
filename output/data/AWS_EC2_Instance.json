@@ -1,30 +1,35 @@
 {
     "list_variables": [
         {
+            "description": "Defines a set of Amazon Elastic Block Store block device mappings, ephemeral instance store                   block device mappings, or both. For more information, see Amazon Elastic Block Store or Amazon EC2 Instance Store in the                   Amazon EC2 User Guide for Linux Instances.",
             "name": "BlockDeviceMappings",
             "name_underscore": "block_device_mappings",
             "required": "No",
             "type": "A list of Amazon EC2 Block Device Mapping Property."
         },
         {
+            "description": "A list of embedded objects that describe the network interfaces to associate                   with this instance.",
             "name": "NetworkInterfaces",
             "name_underscore": "network_interfaces",
             "required": "No",
-            "type": "A list of EC2 NetworkInterface Embedded\n      Property Type"
+            "type": "A list of EC2 NetworkInterface Embedded       Property Type"
         },
         {
+            "description": "A list that contains the security group IDs for VPC security groups to assign                   to the Amazon EC2 instance. If you specified the NetworkInterfaces                   property, do not specify this property.",
             "name": "SecurityGroupIds",
             "name_underscore": "security_group_ids",
-            "required": "Conditional. Required for VPC security\n                  groups.",
+            "required": "Conditional. Required for VPC security                   groups.",
             "type": "List of strings"
         },
         {
+            "description": "Valid only for Amazon EC2 security groups. A list that contains the Amazon EC2 security                   groups to assign to the Amazon EC2 instance. The list can contain both the name of                   existing Amazon EC2 security groups or references to AWS::EC2::SecurityGroup resources                   created in the template.",
             "name": "SecurityGroups",
             "name_underscore": "security_groups",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The Amazon EBS volumes to attach to the instance.",
             "name": "Volumes",
             "name_underscore": "volumes",
             "required": "No",
@@ -42,144 +47,168 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html",
     "variables": [
         {
+            "description": "Specifies the name of the Availability Zone in which the instance is                   located.",
             "name": "AvailabilityZone",
             "name_underscore": "availability_zone",
-            "required": "No. If not specified, an Availability Zone will be automatically\n                  chosen for you based on the load balancing criteria for the region.",
+            "required": "No. If not specified, an Availability Zone will be automatically                   chosen for you based on the load balancing criteria for the region.",
             "type": "String"
         },
         {
+            "description": "Specifies whether the instance can be terminated through the API.",
             "name": "DisableApiTermination",
             "name_underscore": "disable_api_termination",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Specifies whether the instance is optimized for Amazon Elastic Block Store I/O. This                   optimization provides dedicated throughput to Amazon EBS and an optimized configuration                   stack to provide optimal EBS I/O performance.",
             "name": "EbsOptimized",
             "name_underscore": "ebs_optimized",
             "required": "No. By default, AWS CloudFormation specifies false.",
             "type": "Boolean"
         },
         {
+            "description": "The physical ID of an instance profile or a reference to an AWS::IAM::InstanceProfile                   resource.",
             "name": "IamInstanceProfile",
             "name_underscore": "iam_instance_profile",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Provides the unique ID of the Amazon Machine Image (AMI) that was assigned                   during registration.",
             "name": "ImageId",
             "name_underscore": "image_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Indicates whether an instance stops or terminates when you shut down the                   instance from the instance's operating system shutdown command. You can specify                      stop or terminate. For more information, see the                   RunInstances command in the                      Amazon EC2 API Reference.",
             "name": "InstanceInitiatedShutdownBehavior",
             "name_underscore": "instance_initiated_shutdown_behavior",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The instance type, such as t2.micro. The default type is                      \"m1.small\". For a list of instance types, see Instance Families and                   Types.",
             "name": "InstanceType",
             "name_underscore": "instance_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The kernel ID.",
             "name": "KernelId",
             "name_underscore": "kernel_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Provides the name of the Amazon EC2 key pair.",
             "name": "KeyName",
             "name_underscore": "key_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Specifies whether monitoring is enabled for the instance.",
             "name": "Monitoring",
             "name_underscore": "monitoring",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The name of an existing placement group that you want to launch the instance                   into (for cluster instances).",
             "name": "PlacementGroupName",
             "name_underscore": "placement_group_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The private IP address for this instance.",
             "name": "PrivateIpAddress",
             "name_underscore": "private_ip_address",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The ID of the RAM disk to select. Some kernels require additional drivers at                   launch. Check the kernel requirements for information about whether you need to                   specify a RAM disk. To find kernel requirements, go to the AWS Resource Center and                   search for the kernel ID.",
             "name": "RamdiskId",
             "name_underscore": "ramdisk_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Controls whether source/destination checking is enabled on the instance. Also                   determines if an instance in a VPC will perform network address translation                   (NAT).",
             "name": "SourceDestCheck",
             "name_underscore": "source_dest_check",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "If you're using Amazon VPC, this property specifies the ID of the subnet that                   you want to launch the instance into. If you specified the                      NetworkInterfaces property, do not specify this property.",
             "name": "SubnetId",
             "name_underscore": "subnet_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An arbitrary set of tags (key-value pairs) for this instance.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags"
         },
         {
+            "description": "The tenancy of the instance that you want to launch. This value can be either                      \"default\" or \"dedicated\". An instance that has a                      tenancy value of \"dedicated\" runs on                   single-tenant hardware and can be launched only into a VPC. For more information,                   see Using                      EC2 Dedicated Instances Within Your VPC in the                      Amazon VPC User Guide.",
             "name": "Tenancy",
             "name_underscore": "tenancy",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Base64-encoded MIME user data that is made available to the instances.",
             "name": "UserData",
             "name_underscore": "user_data",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Reserved.",
             "name": "AdditionalInfo",
             "name_underscore": "additional_info",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The Availability Zone where the specified instance is launched. For example:                         us-east-1b.",
             "name": "AvailabilityZone",
             "name_underscore": "availability_zone",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The private DNS name of the specified instance. For example:                         ip-10-24-34-0.ec2.internal.",
             "name": "PrivateDnsName",
             "name_underscore": "private_dns_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The public DNS name of the specified instance. For example:                      ec2-107-20-50-45.compute-1.amazonaws.com.",
             "name": "PublicDnsName",
             "name_underscore": "public_dns_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The private IP address of the specified instance. For example:                         10.24.34.0.",
             "name": "PrivateIp",
             "name_underscore": "private_ip",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The public IP address of the specified instance. For example:                         192.0.2.0.",
             "name": "PublicIp",
             "name_underscore": "public_ip",
             "required": "No",

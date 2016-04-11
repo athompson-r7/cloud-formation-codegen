@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "One or more user-defined key-value pairs to be added to the stack attributes                   bag.",
             "name": "Attributes",
             "name_underscore": "attributes",
             "required": "No",
@@ -16,96 +17,112 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html",
     "variables": [
         {
+            "description": "Describes the Chef configuration. For more information, see the CreateStack ChefConfiguration parameter in the                      AWS OpsWorks API Reference.",
             "name": "ChefConfiguration",
             "name_underscore": "chef_configuration",
             "required": "No",
-            "type": "AWS OpsWorks ChefConfiguration\n      Type"
+            "type": "AWS OpsWorks ChefConfiguration       Type"
         },
         {
+            "description": "Describes the configuration manager. When you create a stack, you use the                   configuration manager to specify the Chef version. For supported Chef versions,                   see the CreateStack ConfigurationManager parameter in the                      AWS OpsWorks API Reference.",
             "name": "ConfigurationManager",
             "name_underscore": "configuration_manager",
             "required": "No",
-            "type": "AWS OpsWorks\n      StackConfigurationManager Type"
+            "type": "AWS OpsWorks       StackConfigurationManager Type"
         },
         {
+            "description": "Contains the information required to retrieve a cookbook from a                   repository.",
             "name": "CustomCookbooksSource",
             "name_underscore": "custom_cookbooks_source",
             "required": "No",
             "type": "AWS OpsWorks Source Type"
         },
         {
+            "description": "A user-defined custom JSON object. The custom JSON is used to override the                   corresponding default stack configuration JSON values. For more information, see                      CreateStack in the                      AWS OpsWorks API Reference.",
             "name": "CustomJson",
             "name_underscore": "custom_json",
             "required": "No",
             "type": "JSON object"
         },
         {
+            "description": "The stack's default Availability Zone, which must be in the specified                   region.",
             "name": "DefaultAvailabilityZone",
             "name_underscore": "default_availability_zone",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The Amazon Resource Name (ARN) of an IAM instance profile that is the default                   profile for all of the stack's Amazon EC2 instances.",
             "name": "DefaultInstanceProfileArn",
             "name_underscore": "default_instance_profile_arn",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The stack's default operating system. For more information, see CreateStack in the                      AWS OpsWorks API Reference.",
             "name": "DefaultOs",
             "name_underscore": "default_os",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The default root device type. This value is used by default for all instances                   in the stack, but you can override it when you create an instance. For more                   information, see CreateStack in the AWS OpsWorks API Reference.",
             "name": "DefaultRootDeviceType",
             "name_underscore": "default_root_device_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A default SSH key for the stack instances. You can override this value when you                   create or update an instance.",
             "name": "DefaultSshKeyName",
             "name_underscore": "default_ssh_key_name",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The stack's default subnet ID. All instances are launched into this subnet                   unless you specify another subnet ID when you create the instance.",
             "name": "DefaultSubnetId",
             "name_underscore": "default_subnet_id",
-            "required": "Conditional. If you specify the VpcId property, you\n                  must specify this property.",
+            "required": "Conditional. If you specify the VpcId property, you                   must specify this property.",
             "type": "String"
         },
         {
+            "description": "The stack's host name theme, with spaces replaced by underscores. The theme is                   used to generate host names for the stack's instances. For more information, see                      CreateStack in the                      AWS OpsWorks API Reference.",
             "name": "HostnameTheme",
             "name_underscore": "hostname_theme",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the AWS OpsWorks stack.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The AWS Identity and Access Management (IAM) role that AWS OpsWorks uses to work with AWS resources on your                   behalf. You must specify an Amazon Resource Name (ARN) for an existing IAM                   role.",
             "name": "ServiceRoleArn",
             "name_underscore": "service_role_arn",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Whether the stack uses custom cookbooks.",
             "name": "UseCustomCookbooks",
             "name_underscore": "use_custom_cookbooks",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "Whether to associate the AWS OpsWorks built-in security groups with the stack's                   layers.",
             "name": "UseOpsworksSecurityGroups",
             "name_underscore": "use_opsworks_security_groups",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The ID of the VPC that the stack is to be launched into, which must be in the                   specified region. All instances are launched into this VPC. If you specify this                   property, you must specify the DefaultSubnetId property.",
             "name": "VpcId",
             "name_underscore": "vpc_id",
             "required": "No",

@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "Specifies the headers that you want Amazon CloudFront to forward to the origin for this                   cache behavior (whitelisted headers). For the headers that you specify, Amazon CloudFront                   also caches separate versions of a specified object that is based on the header                   values in viewer requests.",
             "name": "Headers",
             "name_underscore": "headers",
             "required": "No",
@@ -16,12 +17,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-forwardedvalues.html",
     "variables": [
         {
+            "description": "Forwards specified cookies to the origin of the cache behavior.",
             "name": "Cookies",
             "name_underscore": "cookies",
             "required": "No",
-            "type": "CloudFront ForwardedValues\n      Cookies"
+            "type": "CloudFront ForwardedValues       Cookies"
         },
         {
+            "description": "Indicates whether you want CloudFront to forward query strings to the origin that is                   associated with this cache behavior. If so, specify true; if not,                   specify false.",
             "name": "QueryString",
             "name_underscore": "query_string",
             "required": "Yes",

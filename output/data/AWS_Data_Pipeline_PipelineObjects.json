@@ -9,18 +9,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobjects.html",
     "variables": [
         {
+            "description": "Key-value pairs that define the properties of the object.",
             "name": "Fields",
             "name_underscore": "fields",
             "required": "Yes",
-            "type": "AWS Data Pipeline\n      Data Pipeline Object Fields"
+            "type": "AWS Data Pipeline       Data Pipeline Object Fields"
         },
         {
+            "description": "Identifier of the object.",
             "name": "Id",
             "name_underscore": "id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Name of the object.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",

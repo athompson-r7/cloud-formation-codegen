@@ -1,45 +1,52 @@
 {
     "list_variables": [
         {
+            "description": "Contains a list of availability zones for the group.",
             "name": "AvailabilityZones",
             "name_underscore": "availability_zones",
-            "required": "Conditional. If you don't specify the VPCZoneIdentifier\n                  property, you must specify this property.",
+            "required": "Conditional. If you don't specify the VPCZoneIdentifier                   property, you must specify this property.",
             "type": "List of strings"
         },
         {
+            "description": "A list of load balancers associated with this Auto Scaling group.",
             "name": "LoadBalancerNames",
             "name_underscore": "load_balancer_names",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "Enables the monitoring of group metrics of an Auto Scaling group.",
             "name": "MetricsCollection",
             "name_underscore": "metrics_collection",
             "required": "No",
             "type": "A list of  Auto Scaling MetricsCollection"
         },
         {
+            "description": "An embedded property that configures an Auto Scaling group to send notifications when                   specified events take place.",
             "name": "NotificationConfigurations",
             "name_underscore": "notification_configurations",
             "required": "No",
-            "type": "List of Auto Scaling\n      NotificationConfigurations"
+            "type": "List of Auto Scaling       NotificationConfigurations"
         },
         {
+            "description": "The tags you want to attach to this resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
-            "type": "List of Auto Scaling\n                     Tags"
+            "type": "List of Auto Scaling                      Tags"
         },
         {
+            "description": "A policy or a list of policies that are used to select the instances to                   terminate. The policies are executed in the order that you list them.",
             "name": "TerminationPolicies",
             "name_underscore": "termination_policies",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of subnet identifiers of Amazon Virtual Private Cloud (Amazon VPCs).",
             "name": "VPCZoneIdentifier",
             "name_underscore": "vpc_zone_identifier",
-            "required": "Conditional. If you don't specify the\n                     AvailabilityZones property, you must specify this\n                  property.",
+            "required": "Conditional. If you don't specify the                      AvailabilityZones property, you must specify this                   property.",
             "type": "List of strings"
         }
     ],
@@ -54,54 +61,63 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html",
     "variables": [
         {
+            "description": "The number of seconds after a scaling activity is completed before any further                   scaling activities can start.",
             "name": "Cooldown",
             "name_underscore": "cooldown",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Specifies the desired capacity for the Auto Scaling group.",
             "name": "DesiredCapacity",
             "name_underscore": "desired_capacity",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The length of time in seconds after a new EC2 instance comes into service that                   Auto Scaling starts checking its health.",
             "name": "HealthCheckGracePeriod",
             "name_underscore": "health_check_grace_period",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "The service you want the health status from, Amazon EC2 or Elastic Load                   Balancer. Valid values are EC2 or ELB.",
             "name": "HealthCheckType",
             "name_underscore": "health_check_type",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The ID of the Amazon EC2 instance you want to use to create the Auto Scaling group. Use this                   property if you want to create an Auto Scaling group that uses an existing Amazon EC2 instance                   instead of a launch configuration.",
             "name": "InstanceId",
             "name_underscore": "instance_id",
-            "required": "Conditional. You must specify this property if you don't specify the\n                     LaunchConfigurationName property.",
+            "required": "Conditional. You must specify this property if you don't specify the                      LaunchConfigurationName property.",
             "type": "String"
         },
         {
+            "description": "Specifies the name of the associated AWS::AutoScaling::LaunchConfiguration.",
             "name": "LaunchConfigurationName",
             "name_underscore": "launch_configuration_name",
-            "required": "Conditional; you must specify this property if\n                  you don't specify the InstanceId property.",
+            "required": "Conditional; you must specify this property if                   you don't specify the InstanceId property.",
             "type": "String"
         },
         {
+            "description": "The maximum size of the Auto Scaling group.",
             "name": "MaxSize",
             "name_underscore": "max_size",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The minimum size of the Auto Scaling group.",
             "name": "MinSize",
             "name_underscore": "min_size",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name of an existing cluster placement group into which you want to launch                   your instances. A placement group is a logical grouping of instances within a                   single Availability Zone. You cannot specify multiple Availability Zones and a                   placement group.",
             "name": "PlacementGroup",
             "name_underscore": "placement_group",
             "required": "No",

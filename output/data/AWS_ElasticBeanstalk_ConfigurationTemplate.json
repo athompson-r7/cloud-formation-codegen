@@ -1,6 +1,7 @@
 {
     "list_variables": [
         {
+            "description": "A list of                       OptionSettings for this Elastic Beanstalk configuration. For a complete                   list of Elastic Beanstalk configuration options, see  Option                      Values, in the AWS Elastic Beanstalk Developer                      Guide.",
             "name": "OptionSettings",
             "name_underscore": "option_settings",
             "required": "No",
@@ -16,34 +17,39 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html",
     "variables": [
         {
+            "description": "Name of the Elastic Beanstalk application that is associated with this configuration                   template.",
             "name": "ApplicationName",
             "name_underscore": "application_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "An optional description for this configuration.",
             "name": "Description",
             "name_underscore": "description",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "An environment whose settings you want to use to create the configuration                   template. You must specify this property if you don't specify the                      SolutionStackName or SourceConfiguration                   properties.",
             "name": "EnvironmentId",
             "name_underscore": "environment_id",
             "required": "Conditional",
             "type": "String"
         },
         {
+            "description": "The name of an Elastic Beanstalk solution stack that this configuration will use. A                   solution stack specifies the operating system, architecture, and application                   server for a configuration template, such as 64bit Amazon Linux 2013.09                      running Tomcat 7 Java 7. For more information, see Supported Platforms in the                      AWS Elastic Beanstalk Developer Guide.",
             "name": "SolutionStackName",
             "name_underscore": "solution_stack_name",
             "required": "Conditional",
             "type": "String"
         },
         {
+            "description": "A configuration template that is associated with another Elastic Beanstalk application. If                   you specify the SolutionStackName property and the                      SourceConfiguration property, the solution stack in the source                   configuration template must match the value that you specified for the                      SolutionStackName property.",
             "name": "SourceConfiguration",
             "name_underscore": "source_configuration",
             "required": "Conditional",
-            "type": "Elastic Beanstalk\n      SourceConfiguration Property Type"
+            "type": "Elastic Beanstalk       SourceConfiguration Property Type"
         }
     ]
 }

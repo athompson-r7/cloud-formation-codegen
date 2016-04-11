@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html",
     "variables": [
         {
+            "description": "The Amazon S3 bucket that the policy applies to.",
             "name": "Bucket",
             "name_underscore": "bucket",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A policy document containing permissions to add to the specified bucket.",
             "name": "PolicyDocument",
             "name_underscore": "policy_document",
             "required": "Yes",

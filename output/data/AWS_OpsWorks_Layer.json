@@ -1,28 +1,32 @@
 {
     "list_variables": [
         {
+            "description": "One or more user-defined key-value pairs to be added to the stack attributes                   bag.",
             "name": "Attributes",
             "name_underscore": "attributes",
             "required": "No",
             "type": "A list of key-value pairs"
         },
         {
+            "description": "Custom security group IDs for this layer.",
             "name": "CustomSecurityGroupIds",
             "name_underscore": "custom_security_group_ids",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "The packages for this layer.",
             "name": "Packages",
             "name_underscore": "packages",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "Describes the Amazon EBS volumes for this layer.",
             "name": "VolumeConfigurations",
             "name_underscore": "volume_configurations",
             "required": "No",
-            "type": "A list of AWS OpsWorks VolumeConfiguration\n      Type"
+            "type": "A list of AWS OpsWorks VolumeConfiguration       Type"
         }
     ],
     "mixins": [],
@@ -34,72 +38,84 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html",
     "variables": [
         {
+            "description": "Whether to automatically assign an Elastic IP address to Amazon EC2 instances in                   this layer.",
             "name": "AutoAssignElasticIps",
             "name_underscore": "auto_assign_elastic_ips",
             "required": "Yes",
             "type": "Boolean"
         },
         {
+            "description": "For AWS OpsWorks stacks that are running in a VPC, whether to automatically assign a                   public IP address to Amazon EC2 instances in this layer.",
             "name": "AutoAssignPublicIps",
             "name_underscore": "auto_assign_public_ips",
             "required": "Yes",
             "type": "Boolean"
         },
         {
+            "description": "The Amazon Resource Name (ARN) of an IAM instance profile that is to be used                   for the Amazon EC2 instances in this layer.",
             "name": "CustomInstanceProfileArn",
             "name_underscore": "custom_instance_profile_arn",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Custom event recipes for this layer.",
             "name": "CustomRecipes",
             "name_underscore": "custom_recipes",
             "required": "No",
             "type": "AWS OpsWorks Recipes Type"
         },
         {
+            "description": "Whether to automatically heal Amazon EC2 instances that have become disconnected or                   timed out.",
             "name": "EnableAutoHealing",
             "name_underscore": "enable_auto_healing",
             "required": "Yes",
             "type": "Boolean"
         },
         {
+            "description": "Whether to install operating system and package updates when the instance                   boots.",
             "name": "InstallUpdatesOnBoot",
             "name_underscore": "install_updates_on_boot",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The lifecycle events for the AWS OpsWorks layer.",
             "name": "LifecycleEventConfiguration",
             "name_underscore": "lifecycle_event_configuration",
             "required": "No",
-            "type": "AWS OpsWorks Layer\n      LifeCycleConfiguration"
+            "type": "AWS OpsWorks Layer       LifeCycleConfiguration"
         },
         {
+            "description": "The load-based scaling configuration for the AWS OpsWorks layer.",
             "name": "LoadBasedAutoScaling",
             "name_underscore": "load_based_auto_scaling",
             "required": "No",
-            "type": "AWS OpsWorks LoadBasedAutoScaling\n      Type"
+            "type": "AWS OpsWorks LoadBasedAutoScaling       Type"
         },
         {
+            "description": "The AWS OpsWorks layer name.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The layer short name, which is used internally by AWS OpsWorks and by Chef recipes.                   The short name is also used as the name for the directory where your app files are                   installed.",
             "name": "Shortname",
             "name_underscore": "shortname",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the AWS OpsWorks stack that this layer will be associated with.",
             "name": "StackId",
             "name_underscore": "stack_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The layer type. A stack cannot have more than one layer of the same type,                   except for the custom type. You can have any number of                      custom types. For more information, see CreateLayer in the                      AWS OpsWorks API Reference.",
             "name": "Type",
             "name_underscore": "type",
             "required": "Yes",

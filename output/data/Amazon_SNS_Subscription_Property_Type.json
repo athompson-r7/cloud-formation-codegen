@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html",
     "variables": [
         {
+            "description": "The subscription's endpoint (format depends on the protocol). For more                   information, see the Subscribe                      Endpoint parameter in the                   Amazon Simple Notification Service API Reference.",
             "name": "Endpoint",
             "name_underscore": "endpoint",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The subscription's protocol. For more information, see the Subscribe Protocol parameter in                   the Amazon Simple Notification Service API Reference.",
             "name": "Protocol",
             "name_underscore": "protocol",
             "required": "Yes",

@@ -1,10 +1,11 @@
 {
     "list_variables": [
         {
+            "description": "An arbitrary set of tags (key\u2013value pairs) for this health check.",
             "name": "HealthCheckTags",
             "name_underscore": "health_check_tags",
             "required": "No",
-            "type": "List of Amazon Route\u00a053\n      HealthCheckTags"
+            "type": "List of Amazon Route\u00a053       HealthCheckTags"
         }
     ],
     "mixins": [],
@@ -16,10 +17,11 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html",
     "variables": [
         {
+            "description": "An Amazon Route\u00a053 health check.",
             "name": "HealthCheckConfig",
             "name_underscore": "health_check_config",
             "required": "Yes",
-            "type": "Amazon Route\u00a053\n      HealthCheckConfig"
+            "type": "Amazon Route\u00a053       HealthCheckConfig"
         }
     ]
 }

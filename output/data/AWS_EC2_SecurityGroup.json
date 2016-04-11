@@ -11,36 +11,42 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html",
     "variables": [
         {
+            "description": "of the security group.",
             "name": "GroupDescription",
             "name_underscore": "group_description",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "A list of Amazon EC2 security group egress rules.",
             "name": "SecurityGroupEgress",
             "name_underscore": "security_group_egress",
             "required": "No",
-            "type": "EC2 Security Group\n      Rule"
+            "type": "EC2 Security Group       Rule"
         },
         {
+            "description": "A list of Amazon EC2 security group ingress rules.",
             "name": "SecurityGroupIngress",
             "name_underscore": "security_group_ingress",
             "required": "No",
-            "type": "EC2 Security Group\n      Rule"
+            "type": "EC2 Security Group       Rule"
         },
         {
+            "description": "The tags that you want to attach to the resource.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
             "type": "AWS CloudFormation Resource Tags."
         },
         {
+            "description": "The physical ID of the VPC. Can be obtained by using a reference to an AWS::EC2::VPC, such as: { \"Ref\" : \"myVPC\" }.",
             "name": "VpcId",
             "name_underscore": "vpc_id",
             "required": "Yes, for VPC security groups",
             "type": "String"
         },
         {
+            "description": "The group ID of the specified security group, such as                         sg-94b3a1f6.",
             "name": "GroupId",
             "name_underscore": "group_id",
             "required": "No",

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-sourcebundle.html",
     "variables": [
         {
+            "description": "The Amazon S3 bucket where the data is located.",
             "name": "S3Bucket",
             "name_underscore": "s3_bucket",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The Amazon S3 key where the data is located.",
             "name": "S3Key",
             "name_underscore": "s3_key",
             "required": "Yes",

@@ -1,16 +1,18 @@
 {
     "list_variables": [
         {
+            "description": "Describes the pattern that CloudWatch Logs follows to interpret each entry in a log. For                   example, a log entry might contain fields such as timestamps, IP addresses, error                   codes, bytes transferred, and so on. You use the pattern to specify those fields                   and to specify what to look for in the log file. For example, if you're interested                   in error codes that begin with 1234, your filter pattern might be                      [timestamps, ip_addresses, error_codes = 1234*, size, ...].",
             "name": "FilterPattern",
             "name_underscore": "filter_pattern",
             "required": "Yes",
             "type": "List of strings"
         },
         {
+            "description": "Describes how to transform data from a log into a CloudWatch metric.",
             "name": "MetricTransformations",
             "name_underscore": "metric_transformations",
             "required": "Yes",
-            "type": "A list of CloudWatch Logs MetricFilter\n      MetricTransformation Property"
+            "type": "A list of CloudWatch Logs MetricFilter       MetricTransformation Property"
         }
     ],
     "mixins": [],
@@ -22,6 +24,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html",
     "variables": [
         {
+            "description": "The name of an existing log group that you want to associate with this metric                   filter.",
             "name": "LogGroupName",
             "name_underscore": "log_group_name",
             "required": "Yes",

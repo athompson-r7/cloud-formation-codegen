@@ -5,6 +5,7 @@ module Convection
     class Template
       class Resource
         ##
+        # AWS::CloudFormation::WaitConditionHandle
         # AWS_CloudFormation_WaitConditionHandle
         ##
         class CloudFormationWaitConditionHandle < Resource
@@ -13,21 +14,21 @@ module Convection
 
           def initialize(*args)
             super
-            type 'AWS_CloudFormation_WaitConditionHandle'
-
+            type 'CloudFormationWaitConditionHandle'
           end
-
         end
       end
     end
   end
 
   module DSL
-    ## Add DSL method to template namespace
     module Template
+      # DESCRIPTION -- WIP
+      # The following resources are available:
+      # @see http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html 
+      # @see {Model::Template::Resource::CloudFormationWaitConditionHandle}
       def cloudformation_waitconditionhandle(name, &block)
         r = Model::Template::Resource::CloudFormationWaitConditionHandle.new(name, self)
-
         r.instance_exec(&block) if block
         resources[name] = r
       end

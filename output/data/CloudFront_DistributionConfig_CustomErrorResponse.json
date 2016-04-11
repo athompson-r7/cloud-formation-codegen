@@ -9,27 +9,31 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-customerrorresponse.html",
     "variables": [
         {
+            "description": "The minimum amount of time, in seconds, that Amazon CloudFront caches the HTTP status code                   that you specified in the ErrorCode property. The default value is                      300.",
             "name": "ErrorCachingMinTTL",
             "name_underscore": "error_caching_min_ttl",
             "required": "No",
             "type": "Integer"
         },
         {
+            "description": "An HTTP status code for which you want to specify a custom error page. You can                   specify 400, 403, 404, 405,                      414, 500, 501, 502,                      503, or 504.",
             "name": "ErrorCode",
             "name_underscore": "error_code",
             "required": "Yes",
             "type": "Integer"
         },
         {
+            "description": "The HTTP status code that CloudFront returns to viewer along with the custom error                   page. You can specify 200, 400, 403,                      404, 405, 414, 500,                      501, 502, 503, or                   504.",
             "name": "ResponseCode",
             "name_underscore": "response_code",
-            "required": "Conditional. Required if you specified the\n                     ResponsePagePath property.",
+            "required": "Conditional. Required if you specified the                      ResponsePagePath property.",
             "type": "Integer"
         },
         {
+            "description": "The path to the custom error page that CloudFront returns to a viewer when your                   origin returns the HTTP status code that you specified in the                      ErrorCode property. For example, you can specify                      /404-errors/403-forbidden.html.",
             "name": "ResponsePagePath",
             "name_underscore": "response_page_path",
-            "required": "Conditional. Required if you specified the ResponseCode\n                  property.",
+            "required": "Conditional. Required if you specified the ResponseCode                   property.",
             "type": "String"
         }
     ]

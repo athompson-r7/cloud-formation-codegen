@@ -9,28 +9,32 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html",
     "variables": [
         {
+            "description": "The name of the error document for the website.",
             "name": "ErrorDocument",
             "name_underscore": "error_document",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The name of the index document for the website.",
             "name": "IndexDocument",
             "name_underscore": "index_document",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The redirect behavior for every request to this bucket's website endpoint.",
             "name": "RedirectAllRequestsTo",
             "name_underscore": "redirect_all_requests_to",
             "required": "No",
-            "type": "Amazon S3 Website\n      Configuration Redirect All Requests To Property"
+            "type": "Amazon S3 Website       Configuration Redirect All Requests To Property"
         },
         {
+            "description": "Rules that define when a redirect is applied and the redirect behavior.",
             "name": "RoutingRules",
             "name_underscore": "routing_rules",
             "required": "No",
-            "type": "Amazon S3 Website Configuration\n      Routing Rules Property"
+            "type": "Amazon S3 Website Configuration       Routing Rules Property"
         }
     ]
 }

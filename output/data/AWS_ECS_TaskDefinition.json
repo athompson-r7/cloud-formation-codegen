@@ -1,16 +1,18 @@
 {
     "list_variables": [
         {
+            "description": "A list of container definitions in JSON format that describe the containers             that make up your task.",
             "name": "ContainerDefinitions",
             "name_underscore": "container_definitions",
             "required": "Yes",
-            "type": "List of Amazon EC2 Container Service TaskDefinition\n      ContainerDefinitions"
+            "type": "List of Amazon EC2 Container Service TaskDefinition       ContainerDefinitions"
         },
         {
+            "description": "A list of volume definitions in JSON format for volumes that you can use in             your container definitions.",
             "name": "Volumes",
             "name_underscore": "volumes",
             "required": "Yes",
-            "type": "List of Amazon EC2 Container Service TaskDefinition\n      Volumes"
+            "type": "List of Amazon EC2 Container Service TaskDefinition       Volumes"
         }
     ],
     "mixins": [],

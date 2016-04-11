@@ -1,9 +1,10 @@
 {
     "list_variables": [
         {
+            "description": "List of resource records to add. Each record should be in the format                   appropriate for the record type specified by the Type                   property. For information about different record types and their record formats,                   see Appendix: Domain Name Format in the Amazon Route\u00a053 Developer                      Guide.",
             "name": "ResourceRecords",
             "name_underscore": "resource_records",
-            "required": "Conditional. Required if TTL or\n                     SetIdentifier is set. Also, if you set\n                     ResourceRecords, you must set TTL\n                  or SetIdentifier.",
+            "required": "Conditional. Required if TTL or                      SetIdentifier is set. Also, if you set                      ResourceRecords, you must set TTL                   or SetIdentifier.",
             "type": "List of strings"
         }
     ],
@@ -16,81 +17,94 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html",
     "variables": [
         {
+            "description": "Alias resource record sets only: Information about the domain to which you                   are redirecting traffic.",
             "name": "AliasTarget",
             "name_underscore": "alias_target",
-            "required": "Conditional. Required if you are creating an alias resource record\n                  set.",
+            "required": "Conditional. Required if you are creating an alias resource record                   set.",
             "type": "AliasTarget"
         },
         {
+            "description": "Any comments you want to include about the hosted zone.",
             "name": "Comment",
             "name_underscore": "comment",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Designates the record set as a PRIMARY or SECONDARY                   failover record set. When you have more than one resource performing the same                   function, you can configure Amazon Route\u00a053 to check the health of your resources and use                   only health resources to respond to DNS queries. You cannot create nonfailover                   resource record sets that have the same Name and Type                   property values as failover resource record sets. For more information, see the                      Failover element in the Amazon Route\u00a053 API Reference.",
             "name": "Failover",
             "name_underscore": "failover",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Describes how Amazon Route\u00a053 responds to DNS queries based on the geographic origin of                   the query.",
             "name": "GeoLocation",
             "name_underscore": "geo_location",
             "required": "No",
-            "type": "Amazon Route\u00a053 Record Set GeoLocation\n      Property"
+            "type": "Amazon Route\u00a053 Record Set GeoLocation       Property"
         },
         {
+            "description": "The health check ID that you want to apply to this record set. Amazon Route\u00a053 returns                   this resource record set in response to a DNS query only while record set is                   healthy.",
             "name": "HealthCheckId",
             "name_underscore": "health_check_id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The ID of the hosted zone.",
             "name": "HostedZoneId",
             "name_underscore": "hosted_zone_id",
-            "required": "Conditional. You must specify either the\n                     HostedZoneName or HostedZoneId,\n                  but you cannot specify both.",
+            "required": "Conditional. You must specify either the                      HostedZoneName or HostedZoneId,                   but you cannot specify both.",
             "type": "String"
         },
         {
+            "description": "The name of the domain for the hosted zone where you want to add the record set.",
             "name": "HostedZoneName",
             "name_underscore": "hosted_zone_name",
-            "required": "Conditional. You must specify either the\n                     HostedZoneName or HostedZoneId,\n                  but you cannot specify both.",
+            "required": "Conditional. You must specify either the                      HostedZoneName or HostedZoneId,                   but you cannot specify both.",
             "type": "String"
         },
         {
+            "description": "The name of the domain. You must specify a fully qualified domain name that                   ends with a period as the last label indication. If you omit the final period,                   AWS CloudFormation adds it.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Latency resource record sets only: The Amazon EC2 region where the resource that is                   specified in this resource record set resides. The resource typically is an AWS                   resource, for example, Amazon EC2 instance or an Elastic Load Balancing load balancer, and is referred                   to by an IP address or a DNS domain name, depending on the record type.",
             "name": "Region",
             "name_underscore": "region",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "A unique identifier that differentiates among multiple resource record sets that have the same                   combination of DNS name and type.",
             "name": "SetIdentifier",
             "name_underscore": "set_identifier",
-            "required": "Conditional. Required if you are creating a weighted, latency,\n                  failover, or geolocation resource record set.\n                     ResourceRecords must also be set.",
+            "required": "Conditional. Required if you are creating a weighted, latency,                   failover, or geolocation resource record set.                      ResourceRecords must also be set.",
             "type": "String"
         },
         {
+            "description": "The resource record cache time to live (TTL), in seconds. If you specify this                   property, do not specify the AliasTarget property. For alias target                   records, the alias uses a TTL value from the target.",
             "name": "TTL",
             "name_underscore": "ttl",
-            "required": "Conditional. If you don't specify the AliasTarget\n                  property, you must specify this property.",
+            "required": "Conditional. If you don't specify the AliasTarget                   property, you must specify this property.",
             "type": "String"
         },
         {
+            "description": "The type of records to add.",
             "name": "Type",
             "name_underscore": "type",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Weighted resource record sets only: Among resource record sets that have                   the same combination of DNS name and type, a value that determines what portion of traffic for the                   current resource record set is routed to the associated location.",
             "name": "Weight",
             "name_underscore": "weight",
-            "required": "Conditional. Required if you are creating a weighted resource record\n                  set.",
+            "required": "Conditional. Required if you are creating a weighted resource record                   set.",
             "type": "Number. Weight expects integer values."
         }
     ]

@@ -9,52 +9,60 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html",
     "variables": [
         {
+            "description": "Indicates when objects are deleted from Amazon S3 and Amazon Glacier. The date value must be                   in ISO 8601 format. The time is always midnight UTC. If you specify an expiration                   and transition time, you must use the same time unit for both properties (either                   in days or by date). The expiration time must also be later than the transition                   time.",
             "name": "ExpirationDate",
             "name_underscore": "expiration_date",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: ExpirationDate, ExpirationInDays,\n                     NoncurrentVersionExpirationInDays,\n                     NoncurrentVersionTransition, or Transition.",
+            "required": "Conditional. You must specify at least one of the following                   properties: ExpirationDate, ExpirationInDays,                      NoncurrentVersionExpirationInDays,                      NoncurrentVersionTransition, or Transition.",
             "type": "String"
         },
         {
+            "description": "Indicates the number of days after creation when objects are deleted from Amazon S3                   and Amazon Glacier. If you specify an expiration and transition time, you must use the same                   time unit for both properties (either in days or by date). The expiration time                   must also be later than the transition time.",
             "name": "ExpirationInDays",
             "name_underscore": "expiration_in_days",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: ExpirationDate, ExpirationInDays,\n                     NoncurrentVersionExpirationInDays,\n                     NoncurrentVersionTransition, or Transition.",
+            "required": "Conditional. You must specify at least one of the following                   properties: ExpirationDate, ExpirationInDays,                      NoncurrentVersionExpirationInDays,                      NoncurrentVersionTransition, or Transition.",
             "type": "Integer"
         },
         {
+            "description": "A unique identifier for this rule. The value cannot be more than 255                   characters.",
             "name": "Id",
             "name_underscore": "id",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "For buckets with versioning enabled (or suspended), specifies the time, in                   days, between when a new version of the object is uploaded to the bucket and when                   old versions of the object expire. When object versions expire, Amazon S3 permanently                   deletes them. If you specify a transition and expiration time, the expiration time                   must be later than the transition time.",
             "name": "NoncurrentVersionExpirationInDays",
             "name_underscore": "noncurrent_version_expiration_in_days",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: ExpirationDate, ExpirationInDays,\n                     NoncurrentVersionExpirationInDays,\n                     NoncurrentVersionTransition, or Transition.",
+            "required": "Conditional. You must specify at least one of the following                   properties: ExpirationDate, ExpirationInDays,                      NoncurrentVersionExpirationInDays,                      NoncurrentVersionTransition, or Transition.",
             "type": "Integer"
         },
         {
+            "description": "For buckets with versioning enabled (or suspended), specifies when non-current                   objects transition to a specified storage class. If you specify a transition and                   expiration time, the expiration time must be later than the transition                   time.",
             "name": "NoncurrentVersionTransition",
             "name_underscore": "noncurrent_version_transition",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: ExpirationDate, ExpirationInDays,\n                     NoncurrentVersionExpirationInDays,\n                     NoncurrentVersionTransition, or Transition.",
-            "type": "Amazon S3\n      Lifecycle Rule NoncurrentVersionTransition"
+            "required": "Conditional. You must specify at least one of the following                   properties: ExpirationDate, ExpirationInDays,                      NoncurrentVersionExpirationInDays,                      NoncurrentVersionTransition, or Transition.",
+            "type": "Amazon S3       Lifecycle Rule NoncurrentVersionTransition"
         },
         {
+            "description": "Object key prefix that identifies one or more objects to which this rule                   applies.",
             "name": "Prefix",
             "name_underscore": "prefix",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Specify either Enabled or Disabled. If you specify                      Enabled, Amazon S3 executes this rule as scheduled. If you specify                      Disabled, Amazon S3 ignores this rule.",
             "name": "Status",
             "name_underscore": "status",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "Specifies when an object transitions to a specified storage class. If you                   specify an expiration and transition time, you must use the same time unit for                   both properties (either in days or by date). The expiration time must also be                   later than the transition time.",
             "name": "Transition",
             "name_underscore": "transition",
-            "required": "Conditional. You must specify at least one of the following\n                  properties: ExpirationDate, ExpirationInDays,\n                     NoncurrentVersionExpirationInDays,\n                     NoncurrentVersionTransition, or Transition.",
-            "type": "Amazon S3 Lifecycle Rule\n      Transition"
+            "required": "Conditional. You must specify at least one of the following                   properties: ExpirationDate, ExpirationInDays,                      NoncurrentVersionExpirationInDays,                      NoncurrentVersionTransition, or Transition.",
+            "type": "Amazon S3 Lifecycle Rule       Transition"
         }
     ]
 }

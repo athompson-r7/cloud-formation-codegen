@@ -9,27 +9,31 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distributionconfig-viewercertificate.html",
     "variables": [
         {
+            "description": "Indicates whether to use the default certificate for your CloudFront domain name when                   viewers use HTTPS to request your content.",
             "name": "CloudFrontDefaultCertificate",
             "name_underscore": "cloud_front_default_certificate",
-            "required": "Conditional. You must specify either this property or\n                     IamCertificateId.",
+            "required": "Conditional. You must specify either this property or                      IamCertificateId.",
             "type": "Boolean"
         },
         {
+            "description": "The IAM certificate ID to use if you're using an alternate domain                   name.",
             "name": "IamCertificateId",
             "name_underscore": "iam_certificate_id",
-            "required": "Conditional. You must specify either this property or\n                     CloudFrontDefaultCertificate.",
+            "required": "Conditional. You must specify either this property or                      CloudFrontDefaultCertificate.",
             "type": "String"
         },
         {
+            "description": "The minimum version of the SSL protocol that you want CloudFront to use for HTTPS                   connections. CloudFront serves your objects only to browsers or devices that support at                   least the SSL version that you specify.",
             "name": "MinimumProtocolVersion",
             "name_underscore": "minimum_protocol_version",
             "required": "No.",
             "type": "String"
         },
         {
+            "description": "Specifies how CloudFront serves HTTPS requests.",
             "name": "SslSupportMethod",
             "name_underscore": "ssl_support_method",
-            "required": "Conditional. Required if you specified the\n                     IamCertificateId property.",
+            "required": "Conditional. Required if you specified the                      IamCertificateId property.",
             "type": "String"
         }
     ]

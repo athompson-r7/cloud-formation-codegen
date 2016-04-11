@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-attributedef.html",
     "variables": [
         {
+            "description": "The name of an attribute. Attribute names can be 1 - 255 characters long                   and have no character restrictions.",
             "name": "AttributeName",
             "name_underscore": "attribute_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The data type for the attribute. You can specify S for string                   data, N for numeric data, or B for binary data.",
             "name": "AttributeType",
             "name_underscore": "attribute_type",
             "required": "Yes",

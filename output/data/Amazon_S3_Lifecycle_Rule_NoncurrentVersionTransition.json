@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html",
     "variables": [
         {
+            "description": "The storage class to which you want the noncurrent objects to transition.                   Currently, you can specify only Glacier.",
             "name": "StorageClass",
             "name_underscore": "storage_class",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The number of days between the time that a new version of the object is                   uploaded to the bucket and when old versions of the object are transitioned to the                   specified storage class.",
             "name": "TransitionInDays",
             "name_underscore": "transition_in_days",
             "required": "Yes",

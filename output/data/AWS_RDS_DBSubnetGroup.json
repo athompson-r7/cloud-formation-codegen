@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "The EC2 Subnet IDs for the DB Subnet Group.",
             "name": "SubnetIds",
             "name_underscore": "subnet_ids",
             "required": "Yes",
             "type": "List of strings"
         },
         {
+            "description": "The tags that you want to attach to the RDS database subnet group.",
             "name": "Tags",
             "name_underscore": "tags",
             "required": "No",
@@ -24,6 +26,7 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnet-group.html",
     "variables": [
         {
+            "description": "The description for the DB Subnet Group.",
             "name": "DBSubnetGroupDescription",
             "name_underscore": "db_subnet_group_description",
             "required": "Yes",

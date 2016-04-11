@@ -1,10 +1,11 @@
 {
     "list_variables": [
         {
+            "description": "A list of load balancer objects to associate with the cluster.",
             "name": "LoadBalancers",
             "name_underscore": "load_balancers",
             "required": "No",
-            "type": "List of Amazon EC2 Container Service Service\n      LoadBalancers"
+            "type": "List of Amazon EC2 Container Service Service       LoadBalancers"
         }
     ],
     "mixins": [],
@@ -16,24 +17,28 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html",
     "variables": [
         {
+            "description": "The name or Amazon Resource Name (ARN) of the cluster that you want to run your                   service on. If you do not specify a cluster, Amazon ECS uses the default                   cluster.",
             "name": "Cluster",
             "name_underscore": "cluster",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The number of simultaneous tasks, which you specify by using the                      TaskDefinition property, that you want to run on the                   cluster.",
             "name": "DesiredCount",
             "name_underscore": "desired_count",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The name or ARN of an AWS Identity and Access Management (IAM) role that allows your Amazon ECS container                   agent to make calls to your load balancer.",
             "name": "Role",
             "name_underscore": "role",
-            "required": "Conditional. This parameter is required only if you specify the\n                     LoadBalancers property.",
+            "required": "Conditional. This parameter is required only if you specify the                      LoadBalancers property.",
             "type": "String"
         },
         {
+            "description": "The family, family and revision                      (family:revision), or ARN                   of the task definition that you want to run on the cluster.",
             "name": "TaskDefinition",
             "name_underscore": "task_definition",
             "required": "Yes",

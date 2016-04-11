@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html",
     "variables": [
         {
+            "description": "Elastic Load Balancing load balancer name.",
             "name": "ElasticLoadBalancerName",
             "name_underscore": "elastic_load_balancer_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to.",
             "name": "LayerId",
             "name_underscore": "layer_id",
             "required": "Yes",

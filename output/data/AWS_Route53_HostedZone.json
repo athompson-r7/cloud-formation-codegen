@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "An arbitrary set of tags (key\u2013value pairs) for this hosted zone.",
             "name": "HostedZoneTags",
             "name_underscore": "hosted_zone_tags",
             "required": "No",
-            "type": "List of Amazon Route\u00a053\n      HostedZoneTags"
+            "type": "List of Amazon Route\u00a053       HostedZoneTags"
         },
         {
+            "description": "One or more VPCs that you want to associate with this hosted zone. When you                   specify this property, AWS CloudFormation creates a private hosted zone.",
             "name": "VPCs",
             "name_underscore": "vp_cs",
             "required": "No",
@@ -22,12 +24,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html",
     "variables": [
         {
+            "description": "A complex type that contains an optional comment about your hosted zone.",
             "name": "HostedZoneConfig",
             "name_underscore": "hosted_zone_config",
             "required": "No",
-            "type": "Amazon Route\u00a053 HostedZoneConfig\n      Property"
+            "type": "Amazon Route\u00a053 HostedZoneConfig       Property"
         },
         {
+            "description": "The name of the domain. For resource record types that include a domain name,                   specify a fully qualified domain name.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",

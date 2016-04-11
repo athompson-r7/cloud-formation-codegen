@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "One or more user-defined key-value pairs to be added to the stack attributes                   bag.",
             "name": "Attributes",
             "name_underscore": "attributes",
             "required": "No",
             "type": "A list of key-value pairs"
         },
         {
+            "description": "The app virtual host settings, with multiple domains separated by commas. For                   example, 'www.example.com, example.com'.",
             "name": "Domains",
             "name_underscore": "domains",
             "required": "No",
@@ -22,48 +24,56 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html",
     "variables": [
         {
+            "description": "Contains the information required to retrieve an app from a repository.",
             "name": "AppSource",
             "name_underscore": "app_source",
             "required": "No",
             "type": "AWS OpsWorks Source Type"
         },
         {
+            "description": "A description of the app.",
             "name": "Description",
             "name_underscore": "description",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "Whether to enable SSL for this app.",
             "name": "EnableSsl",
             "name_underscore": "enable_ssl",
             "required": "No",
             "type": "Boolean"
         },
         {
+            "description": "The AWS OpsWorks app name.",
             "name": "Name",
             "name_underscore": "name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The app short name, which is used internally by AWS OpsWorks and by Chef                   recipes.",
             "name": "Shortname",
             "name_underscore": "shortname",
             "required": "No",
             "type": "String"
         },
         {
+            "description": "The SSL configuration",
             "name": "SslConfiguration",
             "name_underscore": "ssl_configuration",
             "required": "No",
-            "type": "AWS OpsWorks SslConfiguration\n      Type"
+            "type": "AWS OpsWorks SslConfiguration       Type"
         },
         {
+            "description": "The AWS OpsWorks stack ID that this app will be associated with.",
             "name": "StackId",
             "name_underscore": "stack_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The app type. Each supported type is associated with a particular layer. For                   more information, see CreateApp in the AWS OpsWorks API Reference.",
             "name": "Type",
             "name_underscore": "type",
             "required": "Yes",

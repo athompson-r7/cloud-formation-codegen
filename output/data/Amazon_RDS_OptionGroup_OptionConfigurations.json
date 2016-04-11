@@ -1,12 +1,14 @@
 {
     "list_variables": [
         {
+            "description": "A list of database security group names for this option. If the option requires             access to a port, the security groups must allow access to that port. If you specify             this property, don't specify the VPCSecurityGroupMemberships             property.",
             "name": "DBSecurityGroupMemberships",
             "name_underscore": "db_security_group_memberships",
             "required": "No",
             "type": "List of strings"
         },
         {
+            "description": "A list of VPC security group IDs for this option. If the option requires access to a             port, the security groups must allow access to that port. If you specify this property,             don't specify the DBSecurityGroupMemberships property.",
             "name": "VpcSecurityGroupMemberships",
             "name_underscore": "vpc_security_group_memberships",
             "required": "No",
@@ -22,18 +24,21 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfigurations.html",
     "variables": [
         {
+            "description": "The name of the option. For more information about options, see Working with Option               Groups in the Amazon Relational Database Service User               Guide.",
             "name": "OptionName",
             "name_underscore": "option_name",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The settings for this option.",
             "name": "OptionSettings",
             "name_underscore": "option_settings",
             "required": "No",
-            "type": "Amazon RDS\n    OptionGroup OptionConfigurations OptionSettings"
+            "type": "Amazon RDS     OptionGroup OptionConfigurations OptionSettings"
         },
         {
+            "description": "The port number that this option uses.",
             "name": "Port",
             "name_underscore": "port",
             "required": "No",

@@ -9,12 +9,14 @@
     "url": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-attachment.html",
     "variables": [
         {
+            "description": "The ID of the network interface attachment.",
             "name": "AttachmentID",
             "name_underscore": "attachment_id",
             "required": "Yes",
             "type": "String"
         },
         {
+            "description": "The ID of the instance attached to the network interface.",
             "name": "InstanceID",
             "name_underscore": "instance_id",
             "required": "Yes",
