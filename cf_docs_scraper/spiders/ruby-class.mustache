@@ -5,7 +5,8 @@ module Convection
     class Template
       class Resource
         ##
-        # {{ruby_comment_name}}
+        # {{topic_title}}
+        # {{resource_name}}
         ##
         class {{ruby_class_name}} < Resource
 
@@ -14,35 +15,49 @@ module Convection
           {{/mixins}}
 
           {{#variables}}
+          # @!scope class
+          # @attribute [w]
+          # {{name}}
+          # {{description}} -- WIP
+          # @note Required: {{required}}
+          # @see {{resource_url}}
           property :{{name_underscore}}, '{{name}}'
+
           {{/variables}}
+          {{#list_variables}}
+          # @!scope class
+          # @attribute [w]
+          # {{name}}
+          # {{description}} -- WIP
+          # @note Required: {{required}}
+          # @see {{resource_url}}
+          property :{{name_underscore}}, '{{name}}', :array
+
+          {{/list_variables}}
 
           def initialize(*args)
             super
-            type '{{ruby_comment_name}}'
-
-            {{#list_variables}}
-            @variables['{{name}}'] = []
-            {{/list_variables}}
+            type '{{ruby_class_name}}'
           end
-
-          {{#list_variables}}
-          def {{name_underscore}}(value)
-            @variables['{{name}}'] << value
-          end
-          
-          {{/list_variables}}
         end
       end
     end
   end
 
   module DSL
-    ## Add DSL method to template namespace
     module Template
+      # DESCRIPTION -- WIP
+      # The following resources are available:
+      {{#variables}}
+      # {Model::Template::Resource::{{ruby_class_name}}#{{name_underscore}} {{name_underscore}}}
+      {{/variables}}
+      {{#list_variables}}
+      # {Model::Template::Resource::{{ruby_class_name}}#{{name_underscore}} {{name_underscore}}}
+      {{/list_variables}}
+      # @see {{url}}
+      # @see {Model::Template::Resource::{{ruby_class_name}}}
       def {{ruby_class_name_underscore}}(name, &block)
         r = Model::Template::Resource::{{ruby_class_name}}.new(name, self)
-
         r.instance_exec(&block) if block
         resources[name] = r
       end

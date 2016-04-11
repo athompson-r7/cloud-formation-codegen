@@ -3,6 +3,7 @@ import inflection
 import re
 import scrapy
 import urlparse
+import urllib
 import sys
 
 from cf_docs_scraper.items import CloudFormationObjectDataItem
@@ -22,10 +23,17 @@ class AwsCfSpider(scrapy.Spider):
     def parse(self, response):
 
         base_url = get_base_url( response )
-        
+
         for href in response.css("div.highlights > ul > li > a::attr('href')").extract():
             url = urlparse.urljoin( base_url, href )
             yield scrapy.Request(url, callback=self.parse_topic)
+
+    def normalize(self, string):
+	string = string.replace( '\n', ' ' )
+	print "--- " + string
+	string = string.replace( u'\u2013', '-' )
+	string = urllib.unquote(string).decode('utf8', 'ignore')
+	return string
 
     def parse_topic(self, response):
 
@@ -47,15 +55,15 @@ class AwsCfSpider(scrapy.Spider):
         resource_name = resource_name.replace( ' ', '_' )
         data[ 'resource_name' ] = resource_name
 
-        data[ 'ruby_comment_name' ] = resource_name.replace( '-', "::" )
+        data[ 'ruby_comment_name' ] = resource_name.replace( "-", "::" )
         data[ 'ruby_class_name' ] = "".join( resource_name.split( "_" )[1:])
         data[ 'ruby_class_name_underscore' ] = "_".join( resource_name.lower().split( "_" )[1:])
-        
+
         data[ 'variables' ] = []
         data[ 'list_variables' ] = []
-        
+
         mixins = set()
-        
+
         # iterate over the lists of variables
         variablelists = response.xpath("//div[@class='variablelist']/dl")
 
@@ -63,7 +71,7 @@ class AwsCfSpider(scrapy.Spider):
 
             variable_titles = variablelist.xpath( "dt" )
             variable_descriptions = variablelist.xpath( "dd" )
-            
+
             if( len( variable_titles ) == len( variable_descriptions ) ):
 
                 # iterate over the variables in this list
@@ -72,26 +80,39 @@ class AwsCfSpider(scrapy.Spider):
 
                     variable_name = remove_tags( variable_titles[ i ].xpath( "span" ).extract()[ 0 ] )
                     variable_name = variable_name.replace( u'\xa0', ' ' ) #&nbsp
-                    
+
                     variable_data[ "name" ] = variable_name
                     variable_data[ "name_underscore" ] = inflection.underscore( variable_name )
-    
+
                     paragraphs = variable_descriptions[ i ].xpath("p").extract()
-                    for paragraph in paragraphs:
+
+                    for idx,paragraph in enumerate(paragraphs):
                         clean_paragraph = remove_tags( paragraph )
-                        
+
+                        if( idx == 0 ):
+                            variable_data
+                            variable_description = clean_paragraph.strip()
+                            variable_data[ "description" ] = self.normalize(variable_description)
+                            print variable_data["description"]
+
                         if( clean_paragraph.startswith( "Type:" ) ):
                             variable_type = clean_paragraph.replace( "Type:", "", 1 ).strip()
-                            variable_data[ "type" ] =  variable_type
+                            variable_data[ "type" ] =  self.normalize(variable_type)
                         elif( clean_paragraph.startswith( "Type" ) ):
                             variable_type = clean_paragraph.replace( "Type", "", 1 ).strip()
-                            variable_data[ "type" ] =  variable_type
+                            variable_data[ "type" ] =  self.normalize(variable_type)
                         elif( clean_paragraph.startswith( "Required:" ) ):
                             variable_required = clean_paragraph.replace( "Required:", "", 1 ).strip()
-                            variable_data[ "required" ] =  variable_required
+                            variable_data[ "required" ] =  self.normalize(variable_required)
                         elif( clean_paragraph.startswith( "Required" ) ):
                             variable_required = clean_paragraph.replace( "Required", "", 1 ).strip()
-                            variable_data[ "required" ] =  variable_required
+                            variable_data[ "required" ] =  self.normalize(variable_required)
+                        elif( clean_paragraph.startswith( "Description:" ) ):
+                            variable_required = clean_paragraph.replace( "Description:", "", 1 ).strip()
+                            variable_data[ "description" ] =  self.normalize(variable_required)
+                        elif( clean_paragraph.startswith( "Description" ) ):
+                            variable_required = clean_paragraph.replace( "Description", "", 1 ).strip()
+                            variable_data[ "description" ] =  self.normalize(variable_required)
 
                     # if there is no type or no variable data, set some defaults
                     if "type" not in variable_data:
@@ -101,11 +122,11 @@ class AwsCfSpider(scrapy.Spider):
                         variable_data[ "required" ] = "No"
 
                     ## TODO: keep track of entires without a type or required element
-                        
+
                     # is it tags?
                     if( variable_data[ "name" ] == "Tags" ):
                         mixins.add( "Taggable" )
-                            
+
                     # is it a list?
                     lower_type = variable_data[ "type" ].lower()
                     if( lower_type.startswith( "list of " ) or
@@ -118,5 +139,5 @@ class AwsCfSpider(scrapy.Spider):
 
         # clean up the list of mixins
         data[ 'mixins' ] = list( mixins )
-        
+
         yield data
